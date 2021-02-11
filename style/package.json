@@ -1,0 +1,11 @@
+{
+  "name": "ohmyfood_style",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch style.scss:css/ohmyfood_style.css"
+  },
+  "author": "YoannF",
+  "license": "ISC"
+}

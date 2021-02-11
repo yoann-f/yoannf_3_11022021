@@ -1,0 +1,101 @@
+* {
+    background-color: #fff;
+}
+
+body {
+    margin: 0;
+}
+
+// MISE EN FORME
+h1 {
+    font-size: 4em;
+}
+
+// MIXIN ET VARIABLES
+@mixin miseEnPage {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;    
+}
+
+@mixin header {
+    display: flex;
+    justify-content: center;
+    padding: 1.2em 0 1.2em 0;    
+}
+
+// VARIABLES IMAGES
+$thumbnail_width: 40em;
+$thumbnail-height: 25em;
+$btn-gradient: linear-gradient(#ff79da, #9356DC);
+
+// HEADER
+header {
+    @include miseEnPage();
+    padding: 2em 0 2em 0;
+}
+
+.header-navigation {
+    width: 100%;
+    &__logo {
+        @include header();
+    }
+    &__search {
+        @include header();
+        &__field-form {
+            width: 100%;
+            height: 8em;               
+        }
+        & input {
+            background-color: #e7e7e7;
+        }
+    }    
+    &__localisation {
+        padding: 2em 4em 0 4em;
+        background-color: #ebebeb;         
+        text-align: center;
+        & h1, p, a {
+            background-color: #ebebeb;
+            display: flex;
+            justify-content: center;
+            text-decoration: none;            
+        }
+        & h3 {
+            width: 16em;
+            height: 3em;
+            color: #ebebeb;
+            font-size: 2em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1em 2em 1em 2em;
+            background: $btn-gradient;
+            border-radius: 4em;
+        }
+    }
+}
+
+input {
+    &#search-field {
+        width: inherit;
+        height: inherit;
+        text-align: center;
+        font-size: 1.5em;
+    }
+}
+
+// MAIN
+main {
+    @include miseEnPage();
+    & .main-restaurants-list {
+        & img {
+            width: $thumbnail_width;
+            height: $thumbnail-height;
+            object-fit: cover;
+        }
+    }
+    & .main-header {
+        width: 100%;
+    }    
+}
+
