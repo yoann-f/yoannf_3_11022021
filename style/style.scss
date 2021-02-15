@@ -1,6 +1,24 @@
-* {
+/** {
     background-color: #fff;
+}*/
+@font-face {
+    font-family: 'shrikhandregular';
+    src: url('police/shrikhand-regular-webfont.woff2') format('woff2'),
+         url('police/shrikhand-regular-webfont.woff') format('woff'),
+         url('police/shrikhand-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
+
+@font-face {
+    font-family: 'robotoregular';
+    src: url('police/roboto-regular-webfont.woff2') format('woff2'),
+         url('police/roboto-regular-webfont.woff') format('woff'),
+         url('police/roboto-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 
 body {
     margin: 0;
@@ -9,6 +27,26 @@ body {
 // MISE EN FORME
 h1 {
     font-size: 4em;
+    font-family: shrikhandregular, arial, serif;
+/*    text-transform: uppercase;*/        
+}
+
+h2 {
+    font-size: 4em;
+    font-family: shrikhandregular, arial, serif;
+    width: 85%;
+}
+
+h3 {
+    font-size: 3em;
+    font-family: shrikhandregular, arial, serif;
+    margin: 0.2em 0 0 1em;
+}
+
+p {
+    font-size: 3em;
+    font-family: robotoregular, arial, serif;
+    margin: 0.2em 0 0 1em;
 }
 
 // MIXIN ET VARIABLES
@@ -21,12 +59,44 @@ h1 {
 @mixin header {
     display: flex;
     justify-content: center;
-    padding: 1.2em 0 1.2em 0;    
+    //padding: 1.2em 0 1.2em 0;    
+}
+
+@mixin header-nav {
+        background-color: #f6f6f6;
+        display: flex;
+        justify-content: center;
+        text-decoration: none;
+}
+
+@mixin user-button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 5em;
+            /*border: solid; /*A SUPPRIMER*/
+            box-shadow: 0em 0.4em 0.5em rgb(155 155 145 / 15%);
+            border-radius: 1.5em;
+            font-size: xx-large;
+            font-family: shrikhandregular, arial, serif;    
+            margin: 2em 0 2em 0; 
+            background-color: #f6f6f6;
+            &:hover {
+                background-color: #f5edff;
+            }
+        }
+
+@mixin iterating {
+    @for $i from 1 through 3 {
+        &-#{$i} {
+        }
+    }
 }
 
 // VARIABLES IMAGES
-$thumbnail_width: 40em;
+$thumbnail_width: 100%; //40em;
 $thumbnail-height: 25em;
+$thumbnail-border-radius: 2em 2em 0 0;
 $btn-gradient: linear-gradient(#ff79da, #9356DC);
 
 // HEADER
@@ -39,6 +109,7 @@ header {
     width: 100%;
     &__logo {
         @include header();
+        padding-bottom: 2em;
     }
     &__search {
         @include header();
@@ -47,19 +118,23 @@ header {
             height: 8em;               
         }
         & input {
-            background-color: #e7e7e7;
+            background-color: #eaeaea;
         }
     }    
     &__localisation {
         padding: 2em 4em 0 4em;
-        background-color: #ebebeb;         
+        background-color: #f6f6f6;         
         text-align: center;
-        & h1, p, a {
-            background-color: #ebebeb;
-            display: flex;
-            justify-content: center;
-            text-decoration: none;            
+        & h1 {
+            @include header-nav();         
         }
+        & p {
+            @include header-nav();            
+        }
+        & a {
+            @include header-nav(); 
+            padding: 4em 0 8em 0;            
+        }                
         & h3 {
             width: 16em;
             height: 3em;
@@ -81,21 +156,115 @@ input {
         height: inherit;
         text-align: center;
         font-size: 1.5em;
+        border: none;
+        box-shadow: inset 0 0.4em 0.6em #5e5e5e36;
     }
 }
+
+
+//MIXIN ITERATING
+@mixin item-number {
+    @for $i from 1 through 4 {
+        &-#{$i} {
+            margin: 3em 0em;
+            box-shadow: 0 1em 1em #eaeaea;
+            border-radius: 2em;
+            height: 36em;
+            width: 85%;
+            & img {
+                width: $thumbnail_width;
+                height: $thumbnail-height;
+                border-radius: $thumbnail-border-radius;
+                object-fit: cover;
+            }
+        }
+    }
+}
+
 
 // MAIN
 main {
     @include miseEnPage();
-    & .main-restaurants-list {
-        & img {
-            width: $thumbnail_width;
-            height: $thumbnail-height;
-            object-fit: cover;
-        }
-    }
-    & .main-header {
-        width: 100%;
-    }    
+    //margin: 1em 0;
 }
 
+.main {
+    &-how-to-use {
+        width: 85%;
+        &__button {
+            /*width: 52em;
+            border: solid; /*A SUPPRIMER*
+            padding: 2em;*/
+            & .step {
+                position: absolute;
+                padding: 4em 5em 0 0;
+                margin: 2.5em -2em;
+                width: 0em;
+                height: 1em;
+                border-radius: 10em;
+                background-color: aqua;
+                & p {
+                    font-size: 3em;
+                    margin: -1.2em 0 0 0.5em;
+                    position: absolute;
+                }
+            }
+            &__choose-restaurant {
+                @include user-button();
+                }
+            &__compose-menu {
+                @include user-button();
+            }
+            &__taste-restaurant {
+                @include user-button();
+            }
+        }
+    }
+    &-restaurants-list {
+        /*width: 85%;*/
+        background-color: #f6f6f6;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        padding: 6em 0;
+        margin-top: 8em;
+        margin-bottom: -8em;
+        &__item {
+            @include item-number;
+            /*& img {
+                width: $thumbnail_width;
+                height: $thumbnail-height;
+                object-fit: cover;
+            }*/
+            &_title {
+                height: 32em;
+            }
+        }
+        &-header {
+            width: 100%;
+        }
+        & .new {
+            position: absolute;
+            right: 2em;
+            font-size: xxx-large;
+            margin: 1em 0;
+            background-color: aquamarine;        
+        }
+    }
+}    
+
+
+//FOOTER
+footer {
+    background-color: #424242;
+    //bottom: 0;
+    height: 12em;
+    margin-top: 8em;
+    & li {
+    color: white;
+    text-decoration: none;
+    list-style-type: none;
+    font-size: 2.6em;
+    }
+}
