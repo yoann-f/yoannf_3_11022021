@@ -1,6 +1,24 @@
-* {
+/** {
     background-color: #fff;
+}*/
+@font-face {
+    font-family: 'shrikhandregular';
+    src: url('police/shrikhand-regular-webfont.woff2') format('woff2'),
+         url('police/shrikhand-regular-webfont.woff') format('woff'),
+         url('police/shrikhand-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
+
+@font-face {
+    font-family: 'robotoregular';
+    src: url('police/roboto-regular-webfont.woff2') format('woff2'),
+         url('police/roboto-regular-webfont.woff') format('woff'),
+         url('police/roboto-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 
 body {
     margin: 0;
@@ -9,68 +27,178 @@ body {
 // MISE EN FORME
 h1 {
     font-size: 4em;
+    font-family: shrikhandregular, arial, serif;        
+}
+
+h2 {
+    font-size: 4em;
+    font-family: robotoregular, arial, serif;
+    width: 85%;
+}
+
+h3 {
+    font-size: 3em;
+    font-family: robotoregular, arial, serif;
+    margin: 0.2em 0 0 0;
+}
+
+h4 {
+    font-size: 2.6em;
+    font-family: robotoregular, arial, serif;
+    margin: 0.2em 0 0 1em;
+}
+
+h5 {
+    font-family: robotoregular, arial, serif;
+}
+
+p {
+    font-size: 2em;
+    font-family: robotoregular, arial, serif;
+    margin: 0 0 0 1em;
+}
+
+
+//FONTAWESOME
+span.fas.fa-map-marker-alt {
+    position: absolute;
+    margin: 0 7em 0 0;
+}
+
+.fa, .fas {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    font-size: 3em;
+}
+
+.far {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 400;
+    font-size: 5em;
 }
 
 // MIXIN ET VARIABLES
 @mixin miseEnPage {
     display: flex;
     flex-flow: column nowrap;
-    align-items: center;    
+    align-items: center;
+    background-color: #f6f6f6;
+    & .green-underline {
+        margin: 0 0 0 3em;
+        width: 8em;
+        height: 1em;
+        background-color: aquamarine;
+    }    
 }
 
 @mixin header {
     display: flex;
-    justify-content: center;
-    padding: 1.2em 0 1.2em 0;    
+    justify-content: space-around;
+    align-items: center;
 }
 
+@mixin header-nav {
+        background-color: #f6f6f6;
+        display: flex;
+        justify-content: center;
+        text-decoration: none;
+        padding: 0 1em;
+}
+
+@mixin user-button {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            height: 8em;
+            box-shadow: 0em 0.4em 0.5em rgb(155 155 145 / 15%);
+            border-radius: 1.5em;
+            font-size: large;
+            font-family: robotoregular, arial, serif;   
+            margin: 3em 0 3em 0; 
+            background-color: #f6f6f6;
+            &:hover {
+                background-color: #f5edff;
+            }
+        }
+
+
 // VARIABLES IMAGES
-$thumbnail_width: 40em;
+$thumbnail_width: 100%;
 $thumbnail-height: 25em;
+$thumbnail-border-radius: 2em 2em 0 0;
 $btn-gradient: linear-gradient(#ff79da, #9356DC);
+$paragraphe: 1em;
 
 // HEADER
 header {
     @include miseEnPage();
     padding: 2em 0 2em 0;
+    & p {
+        font-size: $paragraphe * 2;
+    }
 }
 
 .header-navigation {
     width: 100%;
     &__logo {
         @include header();
+        padding-bottom: 2em;
+        & span.fas.fa-arrow-left {
+            position: absolute;
+            margin-right: 17em;
+        }
+        & img {
+            width: 40%;
+            margin: 1em 0 0 0;
+        }
     }
     &__search {
         @include header();
         &__field-form {
             width: 100%;
-            height: 8em;               
+            height: 8em;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: center;
+            align-items: center;
+            color: darkgray;               
         }
         & input {
-            background-color: #e7e7e7;
+            background-color: #eaeaea;
+            &:hover, :active, :focus {
+                z-index: 99;
+            }
         }
     }    
     &__localisation {
         padding: 2em 4em 0 4em;
-        background-color: #ebebeb;         
+        background-color: #f6f6f6;         
         text-align: center;
-        & h1, p, a {
-            background-color: #ebebeb;
-            display: flex;
-            justify-content: center;
-            text-decoration: none;            
+        & h2 {
+            @include header-nav();         
         }
-        & h3 {
-            width: 16em;
-            height: 3em;
+        & p {
+            @include header-nav();            
+        }
+        & a {
+            @include header-nav(); 
+            padding: 4em 0 8em 0;            
+        }                
+        &__button {
+            & h5 {
+            //width: 8em;
+            //height: 3em;
             color: #ebebeb;
-            font-size: 2em;
+            font-size: 3em;
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 1em 2em 1em 2em;
+            padding: 0.5em 2em 0.5em 2em;
             background: $btn-gradient;
             border-radius: 4em;
+            cursor: pointer; //Change le curseur lors du survol
+            }
         }
     }
 }
@@ -80,22 +208,280 @@ input {
         width: inherit;
         height: inherit;
         text-align: center;
-        font-size: 1.5em;
+        font-size: 2em;
+        border: none;
+        box-shadow: inset 0 0.4em 0.6em #5e5e5e36;
+        color: darkgray;
     }
 }
+
+
+//MIXIN ITERATING
+@mixin item-number {
+    @for $i from 1 through 4 {
+        &-#{$i} {
+            margin: 3em 0em;
+            box-shadow: 0 1em 1em #eaeaea;
+            border-radius: 2em;
+            height: 36em;
+            width: 85%;
+            & img {
+                width: $thumbnail_width;
+                height: $thumbnail-height;
+                border-radius: $thumbnail-border-radius;
+                object-fit: cover;
+            }
+        }
+    }
+}
+
 
 // MAIN
 main {
     @include miseEnPage();
-    & .main-restaurants-list {
-        & img {
-            width: $thumbnail_width;
-            height: $thumbnail-height;
-            object-fit: cover;
-        }
-    }
-    & .main-header {
-        width: 100%;
-    }    
+    & h5 {
+        //width: 8em;
+        //height: 3em;
+        color: #ebebeb;
+        font-size: 2em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1em 4em 1em 4em;
+        background: $btn-gradient;
+        border-radius: 4em;
+    }       
 }
 
+.main {
+    &-how-to-use {
+        width: 85%;
+        &__button {
+
+            & .step {
+                position: absolute;
+                padding: 4em 5em 0 0;
+                margin: 2em -2em;
+                width: 0em;
+                height: 1em;
+                border-radius: 10em;
+                background-color: #9356DC;
+                & p {
+                    font-size: 3em;
+                    margin: -1.2em 0 0 0.5em;
+                    position: absolute;
+                }
+            }
+            &__choose-restaurant {
+                @include user-button();
+                }
+            &__compose-menu {
+                @include user-button();
+            }
+            &__taste-restaurant {
+                @include user-button();
+            }
+        }
+    }
+    &-restaurants-list {
+        background-color: #f6f6f6;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        padding: 6em 0;
+        margin-top: 8em;
+        margin-bottom: -8em;
+        &__item {
+            @include item-number;
+            &_thumbnail {
+                height: 32em;
+            }
+        }
+        &-header {
+            width: 100%;
+        }
+        & .new {
+            position: absolute;
+            right: 4em;
+            padding: 0.4em 1em;
+            border-radius: 0.2em;
+            font-size: x-large;
+            margin: 1em 0;
+            background-color: aquamarine;        
+        }
+        & .description {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 3em;
+            &__text p {
+                margin: 0;
+            }
+        }
+    }
+    &-content {
+        & img {
+            width: 100%;        
+            object-fit: cover;
+        }
+        &__restaurant-name {
+            position: absolute;
+            margin-top: 53%;
+            background-color: #f6f6f6;
+            width: 100%;
+            //height: 10%; /*A SUPPRIMER*/
+            border-radius: 6em 6em 0 0;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-around;
+            align-items: center;
+            & h1 {
+                padding: 0 0 0 1em;
+            }
+        }
+        &__thumbnail {
+            margin-top: 5em;
+            width: 100%;
+            &-item {
+                //border: solid 1em aquamarine; /*A SUPPRIMER*/
+                border-radius: 3em;
+                margin: 2em;
+                height: 12em;
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: space-between;
+                align-items: center;
+                background-color: #fff;  
+                & h4 {
+                    margin: 0 0 0 0.6em;
+                    font-size: 3em;
+                    font-family: robotoregular, arial, serif;
+                }
+                /*&-tarif {
+                    margin-bottom: 1.5em;
+                    margin-right: 3em;                    
+                    align-self: flex-end;
+                    font-size: x-large;
+                }*/
+                &__right {
+                    display: flex;
+                    flex-flow: row wrap;
+                    justify-content: center;
+                    align-items: center;
+                    width: 25%;
+                    height: 12em;
+                    
+                    &__tarif {
+                        margin-top: 4em;
+                        margin-bottom: 1.5em;
+                        margin-right: 3em;                    
+                        align-self: flex-end;
+                        font-size: x-large;
+                        transform-origin: right;
+                        &:hover {
+                            margin-top: 4em;
+                            margin-right: 16em;
+                            transition: all 0.85s cubic-bezier(0.27, 0.04, 0.01, 1.00);
+                            content: "";
+                        }
+                    }
+    
+                    &__button {
+                        //background-color: aquamarine;
+                        height: 12em;
+                        width: 0;
+                        object-fit: none;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        position: relative;
+                        color: rgba(0, 0, 0, 0);       
+                        &:hover {
+                            transition: all 0.85s cubic-bezier(0.27, 0.04, 0.01, 1.00);
+                            content: "";
+                            width: 20%;
+                            height: inherit;
+                            right: 2em;
+                            border-radius: 0 2em 2em 0;
+                            color: white;
+                            background-color: aquamarine;
+                            position: absolute;
+                        }
+                    }
+                }          
+            }
+        }
+    }
+}    
+
+
+//FOOTER
+footer {
+    background-color: #424242;
+    height: 12em;
+    margin-top: 8em;
+    & h1 {
+        color: white;
+        font-size: 3em;
+        padding-top: 0.4em;
+        padding-left: 1em;
+    }
+    & ul {
+        background: #424242;
+        padding-bottom: 1em;
+    }
+    & li {
+        color: white;
+        text-decoration: none;
+        list-style-type: none;
+        font-size: 1.1em;
+        display: flex;
+        flex-flow: row nowrap;
+        padding: 0.5em;
+        & p {
+            margin: 0 2em;
+        }
+    }
+}
+
+
+
+//BOUTONS
+/*.main-content__thumbnail-item {
+
+    &__right {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
+        width: 25%;
+        height: 100%;        
+    
+        &__button {
+            //background-color: aquamarine;
+            height: 12%;
+            width: 0;
+            object-fit: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            color: rgba(0, 0, 0, 0);       
+            &:hover {
+                transition: all 0.85s cubic-bezier(0.27, 0.04, 0.4, 0.93);
+                content: "";
+                width: 20%;
+                height: 12%;
+                right: 2em;
+                border-radius: 0 2em 2em 0;
+                color: white;
+                background-color: aquamarine;
+                position: absolute;
+            }
+        }
+    }
+}
+*/
