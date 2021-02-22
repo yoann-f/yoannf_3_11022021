@@ -38,7 +38,7 @@ h4 {
   font-size: 2.6em;
   font-family: robotoregular, arial, serif;
   font-weight: normal;
-  margin: 0.2em 0 0 0.4em;
+  margin: 0.2em 0 0 0.7em;
 }
 
 h5 {
@@ -49,10 +49,6 @@ p {
   font-size: 2em;
   font-family: robotoregular, arial, serif;
   margin: 0 1em;
-}
-
-.footer p {
-  color: #ffffff;
 }
 
 a {
@@ -84,25 +80,22 @@ span.fas.fa-map-marker-alt {
 
 .loading-page {
   transition-delay: 2600ms;
-  visibility: hidden;
 }
 .loading-page__background {
-  animation: 2400ms linear fade-out;
+  animation: 3000ms linear fade-out;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 98;
-  width: 100%;
-  height: 100%;
+  width: 0%;
+  height: 0%;
 }
 .loading-page__loading-spinner {
-  animation: 500ms linear infinite spinner;
-  /* animation-play-state: inherit; */
+  animation: 500ms linear spinner;
+  animation-iteration-count: 8;
+  visibility: hidden;
   position: fixed;
   z-index: 99;
-  /* display: flex; */
-  /* justify-content: center; */
-  /* align-items: center; */
   top: 40%;
   left: 35%;
   width: 15em;
@@ -111,28 +104,50 @@ span.fas.fa-map-marker-alt {
   border-radius: 10em;
   border-bottom-color: #9356dc;
   border-right-color: #ff79da;
-  /* transform: translate3d(0, 0, 0); */
-  /* will-change: transform; */
 }
 
 @keyframes spinner {
   0% {
     transform: translate3d(0, 0, 0) rotate(0deg);
+    visibility: visible;
   }
   100% {
     transform: translate3d(0, 0, 0) rotate(360deg);
+    z-index: -1;
   }
 }
 @keyframes fade-out {
   0% {
     background: white;
+    width: 100%;
+    height: 100%;
+  }
+  20% {
+    background: #ff79da;
+  }
+  40% {
+    background: white;
+  }
+  60% {
+    background: #ff79da;
+  }
+  60% {
+    background: white;
+  }
+  80% {
+    background: #ff79da;
   }
   95% {
+    background: white;
     opacity: 1;
   }
   100% {
     background: white;
     opacity: 0;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    z-index: -1;
   }
 }
 header {
@@ -442,6 +457,7 @@ main h5:hover {
   padding: 1em 3em;
 }
 .main-restaurants-list .description__text p {
+  margin: 0;
   font-size: 2.6em;
   font-weight: normal;
 }
@@ -817,6 +833,7 @@ footer li span.fas {
 }
 footer li p {
   margin: 0;
+  color: #ffffff;
 }
 
 /*
