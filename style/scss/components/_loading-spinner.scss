@@ -1,0 +1,49 @@
+//ANIMATION LOADING-SPINNER
+
+@keyframes spinner {
+    0% {
+        transform: translate3d(0, 0, 0) rotate(0deg);
+        visibility: visible;        
+    }
+    100% {
+        transform: translate3d(0, 0, 0) rotate(360deg);
+        z-index: -1;
+    }           
+}
+
+//ANIMATION DU BACKGROUND /EFFET COLORÉ /CLIGNOTANT DURANT L'ANIMATION DU LOADING-SPINNER
+
+@keyframes fade-out {
+    0% {
+        background: rgba(255, 255, 255, 1);
+        width: 100%;
+        height: 100%;
+    }
+    20% {
+        background:  $color-primary;
+    }
+    40% {
+        background: rgba(255, 255, 255, 1);
+    }
+    60% {
+        background:  $color-primary;
+    }
+    60% {
+        background: rgba(255, 255, 255, 1);
+    }
+    80% {
+        background:  $color-primary;
+    }
+    95% {
+        background: rgba(255, 255, 255, 1);
+        opacity: 1;
+    }
+    100% {
+        background: rgba(255, 255, 255, 1);
+        opacity: 0;
+        width: 100%;
+        height: 100%;
+        visibility: hidden;    
+        z-index: -1;
+    }
+}

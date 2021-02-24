@@ -1,0 +1,206 @@
+// MIXINS
+
+@mixin miseEnPage {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    background: $color-quaternary;
+
+    @media all and (min-width: map-get($breakpoint, desktop)) {
+        background-color: tomato; //A SUPPRIMER
+    }
+
+    & .green-underline {
+        margin: 0 0 0 1em;
+        width: 7em;
+        height: 0.5em;
+        background-color: $color-tertiary;
+    }    
+}
+
+@mixin header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+@mixin header-nav {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    padding: 0 1em;
+}
+
+@mixin user-button {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 8em;
+    box-shadow: 0em 0.4em 0.5em rgb(155 155 145 / 15%);
+    border-radius: 1.5em;
+    font-size: large;
+    font-family: robotoregular, arial, serif;
+    margin: 3em 0 3em 0;
+    padding: 0 9em;
+    background-color: $color-septenary;
+
+    &:hover {
+        background-color: $color-senary; /*METTRE UN DARKEN !!!*/
+    }
+}
+
+//MIXIN ITERATING
+@mixin item-number {
+    @for $i from 1 through 4 {
+        &-#{$i} {
+            margin: 3em 0em;
+            box-shadow: 0 1em 1em $color-octonary;
+            border-radius: 2em;
+            height: 36em;
+            width: 85%;
+            & img {
+                width: $thumbnail_width;
+                height: $thumbnail-height;
+                border-radius: $thumbnail-border-radius;
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+@mixin item-number-desktop {
+    @for $i from 1 through 4 {
+        &-#{$i} {
+            margin: 1.5em 0;
+            box-shadow: 0 1em 1em #eaeaea;
+            border-radius: 2em;
+            height: 20em;
+            width: 30%;
+            border: solid #fff;
+            background: #fff;
+            & img {
+                width: 100%;
+                height: 14em;
+                border-radius: 2em 2em 0 0;
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////////
+//LOADING-SPINNER
+@mixin loadingSpinner {
+    transition-delay: 2600ms;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    visibility: hidden;
+    
+    &__background {
+        animation: 3000ms linear fade-out;
+        position: fixed;
+        top: 0;
+        left: 0; 
+        z-index: 998;
+        width: 0%;
+        height: 0%;
+    }
+
+    &__loading-spinner {
+        animation: 500ms linear spinner;
+        animation-iteration-count: 8;
+        visibility: hidden;
+        position: fixed;
+        z-index: 999;
+        width: 15em;
+        height: 15em;
+        border: solid 1em rgba(0, 0, 0, 0.1);
+        border-radius: 10em;
+        border-bottom-color: $color-secondary;
+        border-right-color: $color-primary;
+    }
+}
+
+//LOADING LOGO ANIMATION -VERSION ALTERNATIVE AU LOADING-SPINNER CIRCULAIRE
+@mixin logoAnim {
+    transition-delay: 2600ms;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    visibility: hidden;
+
+    &__background {
+        animation: 3400ms linear fade-out;
+        position: fixed;
+        top: 0;
+        left: 0; 
+        z-index: 998;
+        width: 0%;
+        height: 0%;
+    }
+
+    &__logo-letters {
+        color: #3c3c3c;
+        //animation: logoanim 2500ms cubic-bezier(.25,.46,.45,.94);
+        & span {
+            font-family: shrikhandregular, Arial, serif;
+            font-size: 8em;
+            position: relative;
+            top: 0.6em;
+            display: inline-block;
+            animation: lettersanim 300ms ease infinite alternate;
+            animation-iteration-count: 10;
+            color: $color-secondary;
+            text-shadow: 0 0.05em 0 $color-secondary-darker,0 0.1em 0 $color-secondary-darker, 0 0.11em 0 $color-secondary-darker, 0 0.12em 0$color-secondary-darker, 0 0.13em 0 $color-secondary-darker, 0 0.14em 0 transparent, 0 0.15em 0 transparent, 0 0.16em 0 transparent, 0 0.17em 0 transparent, 0 0.18em 0.5em rgba(0, 0, 0, 0.4);
+            z-index: 999;
+
+            &:nth-child(2) {
+                animation-delay: 0.1s;
+            }
+
+            &:nth-child(3) {
+                animation-delay: 0.2s;
+            }
+
+            &:nth-child(4) {
+                animation-delay: 0.3s;
+            }
+
+            &:nth-child(5) {
+                animation-delay: 0.4s;
+            }
+            &:nth-child(6) {
+                animation-delay: 0.5s;
+            }
+
+            &:nth-child(7) {
+                animation-delay: 0.6s;
+            }
+
+            &:nth-child(8) {
+                animation-delay: 0.7s;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+// ANIMATION DES VIGNETTES /PAGE MENU
+@mixin slide-up {
+    animation-name: slideUp;
+    animation-duration: 1000ms;
+    animation-timing-function: ease;
+    visibility: visible;
+}

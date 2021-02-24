@@ -1,0 +1,55 @@
+// COULEURS
+$color-primary: #ff79da;
+$color-secondary: #9356dc;
+$color-secondary-darker: darken($color-secondary, 10);
+$color-secondary-lighter: lighten($color-secondary, 5); 
+$color-tertiary: #99e2d0;
+$color-tertiary-darker: darken($color-tertiary, 20);
+$color-quaternary: #ffffff;
+$color-quinary: #000000;
+$color-senary: #f5edff;
+$color-septenary: #f6f6f6;
+$color-octonary: #eaeaea;
+$color-input-text: #353535;
+
+//COULEURS DU BACKGROUND
+$color-background-primary: $color-quaternary;
+$color-background-secondary: $color-septenary;
+$color-background-tertiary: $color-input-text;
+
+//COULEURS DES POLICES ET OMBRES
+$link-color: #000000;
+$link-color-white: #ffffff;
+$btn-shadow: #cccccc;
+$color-shadow: #5e5e5e36;
+
+
+//VARIATION /EFFET DES COULEURS
+$btn-gradient: linear-gradient(darken($color-primary, 0%), darken($color-secondary, 0%));
+$btn-lighten-gradient: linear-gradient(lighten($color-primary, 5%), lighten($color-secondary, 5%));
+$dark-btn-shadow: darken($btn-shadow, 10%);
+$light-btn-shadow: lighten($btn-shadow, 10%);
+
+
+//CARACTERISTIQUES DES VIGNETTES POUR LES PAGES -MENUS-
+$thumbnail_width: 100%;
+$thumbnail-height: 25em;
+$thumbnail-height-desktop: 14em;
+$thumbnail-border-radius: 2em 2em 0 0;
+//$btn-gradient: linear-gradient($color-primary, $color-secondary);
+
+
+//NOMBRE DE VIGNETTES MAXIMALES POUR UNE OFFRE DE REPAS, PAR CATÉGORIE
+$max-choice: 4;
+
+
+//CARACTERISTIQUES DES BALISES GÉNÉRIQUES
+$paragraphe: 1em;
+
+
+//BREAKPOINT --> maxwidth: map-get($breakpoint, mobile);
+$breakpoint: (
+    mobile: 768px,
+    tablet: 1024px,
+    desktop: 1920px
+);

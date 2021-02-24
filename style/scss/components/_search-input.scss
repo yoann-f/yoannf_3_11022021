@@ -1,0 +1,29 @@
+//CHAMPS DE RECHERCHE (PAGE D'ACCUEIL)
+
+input {
+    &#search-field {
+        width: inherit;
+        height: inherit;
+        text-align: center;
+        font-size: 2em;
+        border: none;
+        box-shadow: inset 0 0.4em 0.6em $color-shadow;
+        color: $color-input-text;
+    }
+}
+
+@media all and (min-width: 1025px) {
+    
+    input#search-field {
+        width: inherit;
+        height: inherit;
+        text-align: center;
+        font-size: 1.2em;
+        border: none;
+        box-shadow: 0 0.5em 5em #5e5e5e36;
+        color: #35353575;
+        border-radius: 0.5em;
+        width: 100%;
+    }
+    
+}
