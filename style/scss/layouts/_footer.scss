@@ -38,3 +38,47 @@ footer {
         }
     }
 }
+
+@media all and (min-width: 1025px) {
+    footer {
+        background-color: $color-background-tertiary;
+        height: 4em;
+        padding: 0;
+        & h1 {
+            color: white;
+            font-size: 3em;
+            font-weight: normal;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        & ul {
+            padding-bottom: 0em;
+            padding-top: 1em;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            align-items: center;
+        }
+        & li {
+            color: white;
+            text-decoration: none;
+            list-style-type: none;
+            font-size: 0.6em;
+            display: flex;
+            flex-flow: row nowrap;
+            padding: 0 1em;
+            & span {
+                width: 1em;
+                padding-right: 0.5em;
+            }
+        }
+    }
+
+        .footer-logo {
+            position: absolute;
+            right: 5%;
+        }
+}

@@ -12,6 +12,7 @@
 }
 body {
   margin: 0;
+  background: #eaeaea;
 }
 
 .loading-page {
@@ -1222,6 +1223,49 @@ footer li p {
   color: #ffffff;
 }
 
+@media all and (min-width: 1025px) {
+  footer {
+    background-color: #353535;
+    height: 4em;
+    padding: 0;
+  }
+  footer h1 {
+    color: white;
+    font-size: 3em;
+    font-weight: normal;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  footer ul {
+    padding-bottom: 0em;
+    padding-top: 1em;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  footer li {
+    color: white;
+    text-decoration: none;
+    list-style-type: none;
+    font-size: 0.6em;
+    display: flex;
+    flex-flow: row nowrap;
+    padding: 0 1em;
+  }
+  footer li span {
+    width: 1em;
+    padding-right: 0.5em;
+  }
+
+  .footer-logo {
+    position: absolute;
+    right: 5%;
+  }
+}
 @keyframes spinner {
   0% {
     transform: translate3d(0, 0, 0) rotate(0deg);
