@@ -13,11 +13,21 @@
         <!--Conteneur pour le Loading-Spinner-->
         <div class="loading-page">
             <div class="loading-page__background"></div>
-            <div class="loading-page__loading-spinner"></div>
+            <div class="loading-page__logo-letters">
+                <span>o</span>
+                <span>h</span>
+                <span>m</span>
+                <span>y</span>
+                <span>f</span>
+                <span>o</span>
+                <span>o</span>
+                <span>d</span>
+            </div>
+            <!--<div class="loading-page__loading-spinner"></div> -->
         </div>
 
         <header>
-            <!--Conteneur pour l'entête du site-->
+            <!--Conteneur pour l'entête du site MOBILE-->
             <div class="header-navigation">
 
                 <!--Logo d'entête-->
@@ -42,10 +52,100 @@
                     <h5>Explorez nos restaurants</h5>
                 </div>
             </div>
+
+            <!--Conteneur pour l'entête du site DESKTOP-->
+            <div class="header-navigation-desktop">
+            
+                <!--Logo d'entête-->
+                <div class="header-navigation-desktop__logo">
+                    <!--<div class="letter">
+                        <span>o</span>
+                        <span>h</span>
+                        <span>m</span>
+                        <span>y</span>
+                        <span>f</span>
+                        <span>o</span>
+                        <span>o</span>
+                        <span>d</span>
+                    </div>-->
+                    <img class="ohmyfood-logo" src="images/logo/ohmyfood.png" alt="Logo Oh! My food." />
+                    <div class="header-navigation-desktop__localisation__button">
+                        <h5>Explorez nos restaurants</h5>
+                        <div class="menu-button">
+                            <span class="fas fa-bars"></span>
+                            <p>Menu</p>
+                        </div>
+                    </div>
+                </div>
+            
+                <!--Conteneur de présentation du site et bouton pour parcourir les restaurants proposés sur la site-->
+                <div class="header-navigation-desktop__localisation">
+                    <h2>Réservez le menu qui vous convient</h2>
+                    <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
+            
+                </div>
+            
+                <!--Conteneur de la section des éléments décrivant le principe de fonctionnement du site-->
+                <section class="main-how-to-use-desktop">
+                    <div class="icon-site">
+                        <img src="images/icon/ohmyfood_icon_idea.png" alt="Icone Mobile">
+                    </div>
+            
+                    <div class="main-how-to-use-desktop__bloc">
+                        <h3>Fonctionnement</h3>
+            
+                        <div class="main-how-to-use-desktop__content">
+                            <!--Bouton de choix du restaurant-->
+                            <div class="main-how-to-use-desktop__button">
+                                <div class="step">
+                                    <p>1</p>
+                                </div>
+                                <div class="main-how-to-use-desktop__button__choose-restaurant">
+                                    <span class="fas fa-mobile-alt"></span>
+                                    <p>Choisissez un restaurant</p>
+                                </div>
+                            </div>
+            
+                            <!--Bouton de composition du menu-->
+                            <div class="main-how-to-use-desktop__button">
+                                <div class="step">
+                                    <p>2</p>
+                                </div>
+                                <div class="main-how-to-use-desktop__button__compose-menu">
+                                    <span class="fas fa-list-ul"></span>
+                                    <p>Composez votre menu</p>
+                                </div>
+                            </div>
+            
+                            <!--Bouton de dégustation sur place ou à emporter-->
+                            <div class="main-how-to-use-desktop__button">
+                                <div class="step">
+                                    <p>3</p>
+                                </div>
+                                <div class="main-how-to-use-desktop__button__taste-restaurant">
+                                    <span class="fas fa-store"></span>
+                                    <p>Dégustez au restaurant</p>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <!--Conteneur du bloc de recherche-->
+                        <div class="header-navigation-desktop__search">
+                            <p>RECHERCHER</p>
+                            <form method="POST" action="#" class="header-navigation-desktop__search__field-form">
+                                <span class="fas fa-map-marker-alt"></span>
+                                <input type="search" name="search-field" id="search-field" required=""
+                                    placeholder="Ville, arrondissement" value="Paris, Belleville">
+                            </form>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
         </header>
 
         <main>
-            <!--Conteneur de la section des éléments décrivant le principe de fonctionnement du site-->
+            <!--Conteneur de la section des éléments décrivant le principe de fonctionnement du site -VERSION MOBILE-->
             <section class="main-how-to-use">
                 <h2>Fonctionnement</h2>
 
@@ -85,7 +185,7 @@
                 </div>
             </section>
 
-            <!--Conteneur de la section de présentation des restaurants-->
+            <!--Conteneur de la section de présentation des restaurants -VERSION MOBILE-->
             <section class="main-restaurants-list">
                 <h2>Restaurants</h2>
 
@@ -163,6 +263,96 @@
                     </div>
                     </a>
                 </article>
+            </section>
+
+            <!--Conteneur de la section de présentation des restaurants -VERSION DESKTOP-->
+            <section class="main-restaurants-list-desktop">
+                <h3>Restaurants</h3>
+            
+                <!--Bloc Vignettes Restaurants-->
+                <div class="main-restaurants-list-desktop__item">
+            
+                    <!--Vignettes Restaurant-->
+                    <article class="main-restaurants-list-desktop__item-1">
+                        <a href="page_menu_1.html">
+                            <div class="main-restaurants-list-desktop__item-1__thumbnail">
+                                <div class="new">
+                                    <p>Nouveau</p>
+                                </div>
+                                <img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+                                    alt="Aperçu de La Palette du goût">
+            
+                                <div class="description">
+                                    <div class="description__text">
+                                        <h4>La Palette du goût</h4>
+                                        <p>Ménilmontant</p>
+                                    </div>
+                                    <div class="description-heart">
+                                        <span class="far fa-heart"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+            
+                    <article class="main-restaurants-list-desktop__item-2">
+                        <a href="page_menu_2.html">
+                            <div class="main-restaurants-list-desktop__item-2__thumbnail">
+                                <div class="new">
+                                    <p>Nouveau</p>
+                                </div>
+                                <img src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="Aperçu de La note enchantée">
+            
+                                <div class="description">
+                                    <div class="description__text">
+                                        <h4>La note enchantée</h4>
+                                        <p>Charonne</p>
+                                    </div>
+                                    <div class="description-heart">
+                                        <span class="far fa-heart"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+            
+                    <article class="main-restaurants-list-desktop__item-3">
+                        <a href="page_menu_3.html">
+                            <div class="main-restaurants-list-desktop__item-3__thumbnail">
+                                <img src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Aperçu de A la française">
+            
+                                <div class="description">
+                                    <div class="description__text">
+                                        <h4>A la française</h4>
+                                        <p>Cité Rouge</p>
+                                    </div>
+                                    <div class="description-heart">
+                                        <span class="far fa-heart"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+            
+                    <article class="main-restaurants-list-desktop__item-4">
+                        <a href="page_menu_4.html">
+                            <div class="main-restaurants-list-desktop__item-4__thumbnail">
+                                <img src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
+                                    alt="Aperçu de Le Délice des sens">
+            
+                                <div class="description">
+                                    <div class="description__text">
+                                        <h4>Le Délice des sens</h4>
+                                        <p>Folie-Méricourt</p>
+                                    </div>
+                                    <div class="description-heart">
+                                        <span class="far fa-heart"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+                </div>
             </section>
         </main>
 

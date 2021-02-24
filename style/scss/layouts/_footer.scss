@@ -1,0 +1,40 @@
+//FOOTER
+
+footer {
+    background-color: $color-background-tertiary;
+    height: 26em; //30em;
+    padding: 1em 0;
+    & h1 {
+        color: white;
+        font-size: 3em;
+        font-weight: normal;
+        padding-top: 0.4em;
+        padding-left: 1em;
+    }
+    & ul {
+        //background: #424242; //A SUPPRIMER
+        padding-bottom: 2em;
+    }
+    & li {
+        color: white;
+        text-decoration: none;
+        list-style-type: none;
+        font-size: 1.1em;
+        display: flex;
+        flex-flow: row nowrap;
+        padding: 0.2em;
+        & span {
+            width: 1em;
+            padding-right: 1em;
+            &.fas {
+                font-size: 1.8em;
+                display: flex;
+                align-items: center;
+            }
+        }
+        & p {
+            margin: 0;
+            color: $link-color-white;
+        }
+    }
+}
