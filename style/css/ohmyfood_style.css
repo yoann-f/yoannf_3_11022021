@@ -1299,7 +1299,7 @@ input#search-field {
 }
 
 @media all and (min-width: 1025px) {
-  input#search-field {
+  input#search-field-desktop {
     width: inherit;
     height: inherit;
     text-align: center;
