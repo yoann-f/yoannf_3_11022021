@@ -6,12 +6,15 @@
         <meta charset="utf-8" />
         <link rel="stylesheet" href="style/css/ohmyfood_style.css" />
         <link rel="stylesheet" href="fontawesome-5.15.1/css/all.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <!--<meta name="viewport" content="width=device-width, initial-scale=1.0" />-->
         <title>Oh! My Food.</title>
     </head>
 
     <body>
         <!--Conteneur pour le Loading-Spinner-->
         <div class="loading-page">
+            <img src="images/icon/ohmyfood_icon_idea.png" alt="Icone Mobile">
             <div class="loading-page__background"></div>
             <div class="loading-page__logo-letters">
                 <span>o</span>
@@ -38,6 +41,7 @@
                 <!--Conteneur du bloc de recherche-->
                 <div class="header-navigation__search">
                     <form method="POST" action="#" class="header-navigation__search__field-form">
+                        <label for="search-field">RECHERCHER</label>
                         <span class="fas fa-map-marker-alt"></span>
                         <input type="search" name="search-field" id="search-field" required="" placeholder="Ville, arrondissement" value="Paris, Belleville" />
                     </form>
@@ -131,8 +135,8 @@
             
                         <!--Conteneur du bloc de recherche-->
                         <div class="header-navigation-desktop__search">
-                            <p>RECHERCHER</p>
                             <form method="POST" action="#" class="header-navigation-desktop__search__field-form">
+                                <label for="search-field-desktop">RECHERCHER</label>
                                 <span class="fas fa-map-marker-alt"></span>
                                 <input type="search" name="search-field-desktop" id="search-field-desktop" required="" placeholder="Ville, arrondissement" value="Paris, Belleville">
                             </form>
