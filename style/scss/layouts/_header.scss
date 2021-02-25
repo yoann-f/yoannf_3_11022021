@@ -20,9 +20,9 @@
 
 header {
     @include miseEnPage();
-    padding: 2em 0 2em 0;
+    padding: 2em 0 1em 0;
     & p {
-        font-size: $paragraphe * 2;
+        font-size: $paragraphe;
     }
 }
 
@@ -31,27 +31,30 @@ header {
     display: inline-block;
     &__logo {
         @include header();
-        padding-bottom: 2em;
+        padding-bottom: 1em;
         & span.fas.fa-arrow-left {
             position: absolute;
             margin-right: 17em;
         }
         & img {
-            width: 40%;
-            margin: 1em 0 0 0;
+            width: 60%;
+            margin: 0;
         }
     }
     &__search {
         @include header();
         &__field-form {
             width: 100%;
-            height: 8em;
+            height: 4em;
             display: flex;
             flex-direction: row;
             flex-wrap: nowrap;
             justify-content: center;
             align-items: center;
-            color: $color-input-text;               
+            color: $color-input-text;
+            & label {
+                display: none;
+            }              
         }
         & input {
             background-color: $color-octonary;
@@ -67,7 +70,7 @@ header {
         }
     }    
     &__localisation {
-        padding: 2em 4em 0 4em;
+        padding: 2em 1em 0 1em;
         background-color: $color-septenary;         
         text-align: center;
         & h2 {
@@ -83,17 +86,17 @@ header {
         &__button {
             display: flex;
             justify-content: center;
-            margin-bottom: 4em;
+            margin-bottom: 2em;
             & h5 {
                 color: #ebebeb;
-                font-size: 2em;
-                font-weight: normal;
+                font-size: 1em;
+                font-weight: bold;
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 width: 12em;
                 height: 2em;
-                padding: 0.5em 1em 0.5em 1em;
+                padding: 0.5em 1.4em 0.5em 1.4em;
                 background: $btn-gradient;
                 border-radius: 4em;
                 box-shadow: 0 0.4em 0.5em $btn-shadow;
