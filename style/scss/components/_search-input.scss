@@ -12,18 +12,20 @@ input {
     }
 }
 
-@media all and (min-width: 1025px) {
-    
+
+@media all and (min-width: map-get($breakpoint, desktop)) { 
+
     input#search-field-desktop {
-        width: inherit;
+        //width: inherit;
         height: inherit;
         text-align: center;
         font-size: 1.2em;
         border: none;
-        box-shadow: 0 0.5em 5em #5e5e5e36;
+        box-shadow: 0 0.3em 0.5em #5e5e5e36;
         color: #35353575;
         border-radius: 0.5em;
         width: 100%;
-    }
-    
+        padding: 0 1em 0 1em;
+        margin: 2em;
+    }  
 }

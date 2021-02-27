@@ -11,6 +11,7 @@ $color-senary: #f5edff;
 $color-septenary: #f6f6f6;
 $color-octonary: #eaeaea;
 $color-input-text: #353535;
+$color-menu-button-desktop: #ffffff;
 
 //COULEURS DU BACKGROUND
 $color-background-primary: $color-quaternary;
@@ -35,7 +36,7 @@ $light-btn-shadow: lighten($btn-shadow, 10%);
 $thumbnail_width: 100%;
 $thumbnail-height: 11em;
 $thumbnail-height-desktop: 14em;
-$thumbnail-border-radius: 2em 2em 0 0;
+$thumbnail-border-radius: 1.4em 1.4em 0 0;
 //$btn-gradient: linear-gradient($color-primary, $color-secondary);
 
 
@@ -50,6 +51,9 @@ $paragraphe: 1em;
 //BREAKPOINT --> maxwidth: map-get($breakpoint, mobile);
 $breakpoint: (
     mobile: 768px,
-    tablet: 1024px,
-    desktop: 1920px
+    desktop: 1024px
+);
+
+$breakpoint-text-adapt: (
+    desktop-1600: 1600px
 );

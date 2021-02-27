@@ -15,6 +15,16 @@ body {
   background: #eaeaea;
 }
 
+.main-container {
+  background: #f6f6f6;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 2.5em;
+  width: 100%;
+}
+
 .loading-page {
   transition-delay: 2600ms;
   display: flex;
@@ -98,25 +108,26 @@ main {
   }*/
 }
 main .green-underline {
-  margin: 0 0 0 1em;
-  width: 7em;
-  height: 0.5em;
+  margin: 0;
+  width: 3.2em;
+  height: 0.2em;
   background-color: #99e2d0;
 }
 main h5 {
   color: #ebebeb;
-  font-size: 2em;
+  font-size: 1em;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1em 4em 1em 4em;
+  padding: 1em 3em 1em 3em;
   background: linear-gradient(#ff79da, #9356dc);
-  border-radius: 4em;
+  border-radius: 3em;
   box-shadow: 0 0.4em 0.5em #cccccc;
 }
 main h5:hover {
   background: linear-gradient(#ff93e1, #a16be0);
   box-shadow: 0 0.4em 0.5em #b3b3b3;
+  cursor: pointer;
 }
 
 .main-how-to-use {
@@ -125,7 +136,8 @@ main h5:hover {
   justify-content: center;
   align-items: center;
   flex-flow: column nowrap;
-  padding: 0;
+  padding: 0 0 3em;
+  background: #ffffff;
 }
 .main-how-to-use__button {
   display: flex;
@@ -137,14 +149,14 @@ main h5:hover {
 }
 .main-how-to-use__button .step {
   position: relative;
-  padding: 2em 2em 0 0;
+  padding: 1.5em 1.5em 0 0;
   margin: 3em -1em;
   border-radius: 10em;
   background-color: #9356dc;
 }
 .main-how-to-use__button .step p {
   font-size: 1.2em;
-  margin: -1.5em 0 0 0.6em;
+  margin: -1.35em 0 0 0.35em;
   position: absolute;
   color: #ffffff;
 }
@@ -160,6 +172,25 @@ main h5:hover {
   margin: 0;
   padding: 0 2em;
   background-color: #f6f6f6;
+}
+@media all and (min-width: 1024px) {
+  .main-how-to-use__button__choose-restaurant {
+    flex-flow: row nowrap;
+    margin: 2.8em 0;
+    font-size: medium;
+    background-color: #f6f6f6;
+  }
+}
+.main-how-to-use__button__choose-restaurant, .main-how-to-use__button__choose-restaurant p {
+  padding: 0 1.2em;
+}
+@media all and (min-width: 1024px) {
+  .main-how-to-use__button__choose-restaurant, .main-how-to-use__button__choose-restaurant p {
+    padding: 0;
+  }
+}
+.main-how-to-use__button__choose-restaurant, .main-how-to-use__button__choose-restaurant span {
+  padding-left: 1em;
 }
 .main-how-to-use__button__choose-restaurant:hover {
   background-color: #f5edff;
@@ -178,6 +209,25 @@ main h5:hover {
   padding: 0 2em;
   background-color: #f6f6f6;
 }
+@media all and (min-width: 1024px) {
+  .main-how-to-use__button__compose-menu {
+    flex-flow: row nowrap;
+    margin: 2.8em 0;
+    font-size: medium;
+    background-color: #f6f6f6;
+  }
+}
+.main-how-to-use__button__compose-menu, .main-how-to-use__button__compose-menu p {
+  padding: 0 1.2em;
+}
+@media all and (min-width: 1024px) {
+  .main-how-to-use__button__compose-menu, .main-how-to-use__button__compose-menu p {
+    padding: 0;
+  }
+}
+.main-how-to-use__button__compose-menu, .main-how-to-use__button__compose-menu span {
+  padding-left: 1em;
+}
 .main-how-to-use__button__compose-menu:hover {
   background-color: #f5edff;
   /*METTRE UN DARKEN !!!*/
@@ -194,6 +244,25 @@ main h5:hover {
   margin: 0;
   padding: 0 2em;
   background-color: #f6f6f6;
+}
+@media all and (min-width: 1024px) {
+  .main-how-to-use__button__taste-restaurant {
+    flex-flow: row nowrap;
+    margin: 2.8em 0;
+    font-size: medium;
+    background-color: #f6f6f6;
+  }
+}
+.main-how-to-use__button__taste-restaurant, .main-how-to-use__button__taste-restaurant p {
+  padding: 0 1.2em;
+}
+@media all and (min-width: 1024px) {
+  .main-how-to-use__button__taste-restaurant, .main-how-to-use__button__taste-restaurant p {
+    padding: 0;
+  }
+}
+.main-how-to-use__button__taste-restaurant, .main-how-to-use__button__taste-restaurant span {
+  padding-left: 1em;
 }
 .main-how-to-use__button__taste-restaurant:hover {
   background-color: #f5edff;
@@ -213,21 +282,21 @@ main h5:hover {
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding: 0;
-  margin-top: 3em;
-  margin-bottom: 1em;
+  padding: 0 0 2em;
+  margin-top: 1em;
+  margin-bottom: 0;
 }
 .main-restaurants-list__item-1 {
   margin: 1em 0em;
   box-shadow: 0 1em 1em #eaeaea;
   border-radius: 1.4em;
   height: 16em;
-  width: 95%;
+  width: 90%;
 }
 .main-restaurants-list__item-1 img {
   width: 100%;
   height: 11em;
-  border-radius: 2em 2em 0 0;
+  border-radius: 1.4em 1.4em 0 0;
   object-fit: cover;
 }
 .main-restaurants-list__item-2 {
@@ -235,12 +304,12 @@ main h5:hover {
   box-shadow: 0 1em 1em #eaeaea;
   border-radius: 1.4em;
   height: 16em;
-  width: 95%;
+  width: 90%;
 }
 .main-restaurants-list__item-2 img {
   width: 100%;
   height: 11em;
-  border-radius: 2em 2em 0 0;
+  border-radius: 1.4em 1.4em 0 0;
   object-fit: cover;
 }
 .main-restaurants-list__item-3 {
@@ -248,12 +317,12 @@ main h5:hover {
   box-shadow: 0 1em 1em #eaeaea;
   border-radius: 1.4em;
   height: 16em;
-  width: 95%;
+  width: 90%;
 }
 .main-restaurants-list__item-3 img {
   width: 100%;
   height: 11em;
-  border-radius: 2em 2em 0 0;
+  border-radius: 1.4em 1.4em 0 0;
   object-fit: cover;
 }
 .main-restaurants-list__item-4 {
@@ -261,12 +330,12 @@ main h5:hover {
   box-shadow: 0 1em 1em #eaeaea;
   border-radius: 1.4em;
   height: 16em;
-  width: 95%;
+  width: 90%;
 }
 .main-restaurants-list__item-4 img {
   width: 100%;
   height: 11em;
-  border-radius: 2em 2em 0 0;
+  border-radius: 1.4em 1.4em 0 0;
   object-fit: cover;
 }
 .main-restaurants-list__item_thumbnail {
@@ -277,11 +346,11 @@ main h5:hover {
 }
 .main-restaurants-list .new {
   position: absolute;
-  right: 0.5em;
+  right: 6%;
   padding: 0.2em 0.2em;
   border-radius: 0.2em;
   font-size: x-large;
-  margin: 0.4em;
+  margin: 3%;
   background-color: #99e2d0;
 }
 .main-restaurants-list .description {
@@ -297,29 +366,36 @@ main h5:hover {
   font-size: 1.2em;
   font-weight: normal;
 }
+.main-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column nowrap;
+  width: 100%;
+}
 .main-content img {
   width: 100%;
-  height: 40em;
+  height: 20em;
   object-fit: cover;
 }
 .main-content__restaurant-name {
-  position: absolute;
-  margin-top: 53%;
+  margin-top: -6em;
   background-color: #f6f6f6;
   width: 100%;
-  border-radius: 6em 6em 0 0;
+  border-radius: 3em 3em 0 0;
   display: flex;
   flex-flow: row nowrap;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 }
 .main-content__restaurant-name h1.menu-title {
-  margin: 1em 3em 1em 0;
-  padding: 0;
+  margin: 1.5em 0;
+  padding: 0 0.5em;
+  font-size: 1.6em;
   font-weight: normal;
 }
 .main-content__thumbnail {
-  margin-top: 5em;
+  margin-top: 0;
   width: 95%;
   display: flex;
   flex-flow: column nowrap;
@@ -327,44 +403,69 @@ main h5:hover {
 }
 .main-content__thumbnail-item-1 {
   animation-name: slideUp;
+  animation-delay: 3600ms;
   animation-duration: 1000ms;
   animation-timing-function: ease;
-  visibility: visible;
+  animation-direction: normal;
+  animation-fill-mode: both;
 }
 .main-content__thumbnail-item-2 {
   animation-name: slideUp;
+  animation-delay: 3600ms;
   animation-duration: 1000ms;
   animation-timing-function: ease;
-  visibility: visible;
-  animation-delay: 90ms;
+  animation-direction: normal;
+  animation-fill-mode: both;
+  animation-delay: 3890ms;
 }
 .main-content__thumbnail-item-3 {
   animation-name: slideUp;
+  animation-delay: 3600ms;
   animation-duration: 1000ms;
   animation-timing-function: ease;
-  visibility: visible;
-  animation-delay: 180ms;
+  animation-direction: normal;
+  animation-fill-mode: both;
+  animation-delay: 3980ms;
+}
+.main-content__thumbnail-item-4 {
+  animation-name: slideUp;
+  animation-delay: 3600ms;
+  animation-duration: 1000ms;
+  animation-timing-function: ease;
+  animation-direction: normal;
+  animation-fill-mode: both;
+  animation-delay: 4070ms;
 }
 
 .description-heart {
-  margin-right: 1em;
   font-size: 0.4em;
+  padding: 0 5em;
 }
 
 .price {
   display: flex;
   align-items: center;
-  height: 70%;
-  padding: 1.5em 2em 0 2em;
-  font-size: 2.6em;
+  padding: 1.2em 1.2em 0 1.2em;
+  font-size: 1em;
   font-weight: 900;
 }
 
 .main-content__thumbnail-item__content {
-  width: 70%;
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  margin: 0 0 auto;
+  padding-left: 0.4em;
 }
 .main-content__thumbnail-item__content h4.thumbnail-title {
   font-weight: 900;
+  font-size: 1.1em;
+  padding-bottom: 0.2em;
+}
+.main-content__thumbnail-item__content p {
+  font-size: 0.9em;
+  font-family: Arial, serif;
+  font-weight: normal;
 }
 
 .main-content__thumbnail-item-1 {
@@ -372,20 +473,23 @@ main h5:hover {
   justify-content: space-between;
   align-items: center;
   background-color: #ffffff;
-  height: 12em;
-  margin: 1.4em 0;
-  border-radius: 2em;
+  height: 5em;
+  margin: 1.2em 0 0.1em;
+  border-radius: 1em;
   box-shadow: 0 0.4em 0.5em rgba(1, 1, 1, 0.1);
   overflow: hidden;
 }
+.main-content__thumbnail-item-1:hover {
+  cursor: pointer;
+}
 .main-content__thumbnail-item-1:hover .main-content__thumbnail-item__right-button {
   transition: all 0.85s cubic-bezier(0.27, 0.04, 0.01, 1);
-  width: 25%;
+  width: 45%;
   justify-content: center;
   align-items: center;
-  height: 12em;
+  height: 100%;
   right: 2em;
-  border-radius: 0 2em 2em 0;
+  font-size: 1.5em;
   color: white;
   background-color: #99e2d0;
 }
@@ -408,20 +512,23 @@ main h5:hover {
   justify-content: space-between;
   align-items: center;
   background-color: #ffffff;
-  height: 12em;
-  margin: 1.4em 0;
-  border-radius: 2em;
+  height: 5em;
+  margin: 1.2em 0 0.1em;
+  border-radius: 1em;
   box-shadow: 0 0.4em 0.5em rgba(1, 1, 1, 0.1);
   overflow: hidden;
 }
+.main-content__thumbnail-item-2:hover {
+  cursor: pointer;
+}
 .main-content__thumbnail-item-2:hover .main-content__thumbnail-item__right-button {
   transition: all 0.85s cubic-bezier(0.27, 0.04, 0.01, 1);
-  width: 25%;
+  width: 45%;
   justify-content: center;
   align-items: center;
-  height: 12em;
+  height: 100%;
   right: 2em;
-  border-radius: 0 2em 2em 0;
+  font-size: 1.5em;
   color: white;
   background-color: #99e2d0;
 }
@@ -444,20 +551,23 @@ main h5:hover {
   justify-content: space-between;
   align-items: center;
   background-color: #ffffff;
-  height: 12em;
-  margin: 1.4em 0;
-  border-radius: 2em;
+  height: 5em;
+  margin: 1.2em 0 0.1em;
+  border-radius: 1em;
   box-shadow: 0 0.4em 0.5em rgba(1, 1, 1, 0.1);
   overflow: hidden;
 }
+.main-content__thumbnail-item-3:hover {
+  cursor: pointer;
+}
 .main-content__thumbnail-item-3:hover .main-content__thumbnail-item__right-button {
   transition: all 0.85s cubic-bezier(0.27, 0.04, 0.01, 1);
-  width: 25%;
+  width: 45%;
   justify-content: center;
   align-items: center;
-  height: 12em;
+  height: 100%;
   right: 2em;
-  border-radius: 0 2em 2em 0;
+  font-size: 1.5em;
   color: white;
   background-color: #99e2d0;
 }
@@ -480,20 +590,23 @@ main h5:hover {
   justify-content: space-between;
   align-items: center;
   background-color: #ffffff;
-  height: 12em;
-  margin: 1.4em 0;
-  border-radius: 2em;
+  height: 5em;
+  margin: 1.2em 0 0.1em;
+  border-radius: 1em;
   box-shadow: 0 0.4em 0.5em rgba(1, 1, 1, 0.1);
   overflow: hidden;
 }
+.main-content__thumbnail-item-4:hover {
+  cursor: pointer;
+}
 .main-content__thumbnail-item-4:hover .main-content__thumbnail-item__right-button {
   transition: all 0.85s cubic-bezier(0.27, 0.04, 0.01, 1);
-  width: 25%;
+  width: 45%;
   justify-content: center;
   align-items: center;
-  height: 12em;
+  height: 100%;
   right: 2em;
-  border-radius: 0 2em 2em 0;
+  font-size: 1.5em;
   color: white;
   background-color: #99e2d0;
 }
@@ -537,10 +650,10 @@ h3 {
 }
 
 h4 {
-  font-size: 2.5em;
+  font-size: 1.3em;
   font-family: robotoregular, arial, serif;
   font-weight: normal;
-  margin: 0.2em 0 0 0.3em;
+  margin: 1em 0 0;
 }
 
 h5 {
@@ -551,7 +664,7 @@ p {
   font-size: 1em;
   font-family: robotoregular, arial, serif;
   font-weight: normal;
-  margin: 0 1em;
+  margin: 0;
 }
 
 a {
@@ -561,7 +674,8 @@ a {
 
 span.fas.fa-arrow-left {
   position: absolute;
-  margin: 0.7em 1em;
+  margin: 2% 5%;
+  font-size: 1.6em;
 }
 
 span.fas.fa-map-marker-alt {
@@ -569,6 +683,12 @@ span.fas.fa-map-marker-alt {
   font-size: 1.4em;
   z-index: 1;
   margin: 0 10em 0 0;
+  color: #353535;
+}
+@media all and (min-width: 1024px) {
+  span.fas.fa-map-marker-alt {
+    margin: 0 5em 0 0;
+  }
 }
 
 .fa, .fas {
@@ -586,9 +706,17 @@ span.fas.fa-map-marker-alt {
 span.far.fa-heart:hover {
   color: #ff79da;
   font-weight: 900;
+  background: linear-gradient(#ff79da, #9356dc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  cursor: pointer;
 }
 
 .header-navigation-desktop {
+  display: none;
+}
+
+.main-container-desktop {
   display: none;
 }
 
@@ -611,9 +739,9 @@ header {
   padding: 2em 0 1em 0;
 }
 header .green-underline {
-  margin: 0 0 0 1em;
-  width: 7em;
-  height: 0.5em;
+  margin: 0;
+  width: 3.2em;
+  height: 0.2em;
   background-color: #99e2d0;
 }
 header p {
@@ -669,28 +797,32 @@ header p {
   z-index: 10;
 }
 .header-navigation__localisation {
-  padding: 2em 1em 0 1em;
+  padding: 2em 0 0 0;
   background-color: #f6f6f6;
   text-align: center;
+  width: 100%;
 }
 .header-navigation__localisation h2 {
   display: flex;
   justify-content: center;
   text-decoration: none;
   padding: 0;
+  width: 100%;
 }
 .header-navigation__localisation p {
   display: flex;
   justify-content: center;
   text-decoration: none;
   padding: 0;
+  width: 100%;
 }
 .header-navigation__localisation a {
   display: flex;
   justify-content: center;
   text-decoration: none;
   padding: 0;
-  padding: 4em 0 8em 0;
+  width: 100%;
+  padding: 0;
 }
 .header-navigation__localisation__button {
   display: flex;
@@ -735,6 +867,10 @@ header p {
     display: none;
   }
 
+  .main-container {
+    display: none;
+  }
+
   .main-how-to-use {
     display: none;
   }
@@ -743,12 +879,17 @@ header p {
     display: none;
   }
 
+  body {
+    margin: 0;
+    background: #f6f6f6;
+  }
+
   header {
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
-    background: #f6f6f6;
-    padding: 2em 0 2em 0;
+    background: #ffffff;
+    padding: 1em 0 1em 0;
   }
   header p {
     font-size: 1.25em;
@@ -774,7 +915,7 @@ header p {
     padding: 2em 4em 12em 4em;
     padding-right: 4em;
     padding-left: 4em;
-    background-color: #f6f6f6;
+    background-color: #ffffff;
     text-align: center;
     padding-left: 15%;
     padding-right: 15%;
@@ -834,31 +975,33 @@ header p {
     justify-content: center;
     align-items: center;
     color: #353535;
+    font-family: Arial, serif;
   }
   .header-navigation-desktop__search__field-form input {
-    background-color: #eaeaea;
+    background-color: #ffffff;
   }
   .header-navigation-desktop__search__field-form input:hover {
-    z-index: 10;
+    z-index: 1;
   }
   .header-navigation-desktop__search__field-form input:active {
-    z-index: 10;
+    z-index: 1;
+    outline: none;
   }
   .header-navigation-desktop__search__field-form input:focus {
-    z-index: 10;
+    z-index: 1;
+    outline: none;
   }
 
   .menu-button {
     width: 10em;
-    background: aliceblue;
     font-weight: normal;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 12em;
     height: 100%;
+    background: #ffffff;
     padding: 0.1em 0.1em 0.1em 0.1em;
-    background: aliceblue;
     border-radius: 0.3em;
     box-shadow: 0 0.2em 0.5em #ccc;
     cursor: pointer;
@@ -869,10 +1012,16 @@ header p {
     font-size: inherit;
   }
 
+  span.fas.fa-arrow-left {
+    position: absolute;
+    margin: 1% 10%;
+    font-size: xx-large;
+  }
+
   .main-how-to-use-desktop {
     width: 100%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     margin-top: -10em;
     position: absolute;
   }
@@ -890,22 +1039,69 @@ header p {
   }
   .main-how-to-use-desktop__button {
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row nowrap;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     height: 61%;
-    margin: 0 2em;
+    margin: 0 0.5em;
+    width: 21em;
+    /*&__choose-restaurant {
+        //A PLACER EN MIXIN !!!!!
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 4em;
+        box-shadow: 0em 0.4em 0.5em rgba(155, 155, 145, 0.15);
+        border-radius: 0.6em;
+        font-size: large;
+        font-family: robotoregular, arial, serif;
+        margin: 3em 0 3em 0;
+        padding: 0 0 0 0.5em;
+        background-color: #f6f6f6;
+        width: 18em;
+        flex-flow: row nowrap;
+    }
+    &__compose-menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 4em;
+        box-shadow: 0em 0.4em 0.5em rgba(155, 155, 145, 0.15);
+        border-radius: 0.6em;
+        font-size: large;
+        font-family: robotoregular, arial, serif;
+        margin: 3em 0 3em 0;
+        padding: 0 0 0 0.5em;
+        background-color: #f6f6f6;
+        width: 18em;
+        flex-flow: row nowrap;                
+    }
+    &__taste-restaurant {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 4em;
+        box-shadow: 0em 0.4em 0.5em rgba(155, 155, 145, 0.15);
+        border-radius: 0.6em;
+        font-size: large;
+        font-family: robotoregular, arial, serif;
+        margin: 3em 0 3em 0;
+        padding: 0 0 0 0.5em;
+        background-color: #f6f6f6;
+        width: 18em;
+        flex-flow: row nowrap;                 
+    }*/
   }
   .main-how-to-use-desktop__button .step {
     position: absolute;
-    padding: 2.5em 2.5em 0 0;
-    margin: 2em -1.5em;
+    padding: 1.2em;
+    margin: 2em 16em 2em -1.5em;
     border-radius: 10em;
     background-color: #9356dc;
   }
   .main-how-to-use-desktop__button .step p {
     font-size: 2em;
-    margin: -1.35em 0 0 0.35em;
+    margin: -0.7em 0 0 -0.28em;
     position: absolute;
     color: #ffffff;
   }
@@ -922,10 +1118,46 @@ header p {
     padding: 0 2em;
     background-color: #f6f6f6;
   }
+
+  /*.icon-site {
+      margin-left: 15%;
+  }*/
+
+  /*.fas.fa-check-circle:hover {
+      display: flex;
+      justify-content: center;
+  }*/
+}
+@media all and (min-width: 1024px) and (min-width: 1024px) {
+  .main-how-to-use-desktop__button__choose-restaurant {
+    flex-flow: row nowrap;
+    margin: 2.8em 0;
+    font-size: medium;
+    background-color: #f6f6f6;
+  }
+}
+@media all and (min-width: 1024px) {
+  .main-how-to-use-desktop__button__choose-restaurant, .main-how-to-use-desktop__button__choose-restaurant p {
+    padding: 0 1.2em;
+  }
+}
+@media all and (min-width: 1024px) and (min-width: 1024px) {
+  .main-how-to-use-desktop__button__choose-restaurant, .main-how-to-use-desktop__button__choose-restaurant p {
+    padding: 0;
+  }
+}
+@media all and (min-width: 1024px) {
+  .main-how-to-use-desktop__button__choose-restaurant, .main-how-to-use-desktop__button__choose-restaurant span {
+    padding-left: 1em;
+  }
+}
+@media all and (min-width: 1024px) {
   .main-how-to-use-desktop__button__choose-restaurant:hover {
     background-color: #f5edff;
     /*METTRE UN DARKEN !!!*/
   }
+}
+@media all and (min-width: 1024px) {
   .main-how-to-use-desktop__button__compose-menu {
     display: flex;
     justify-content: space-evenly;
@@ -939,10 +1171,37 @@ header p {
     padding: 0 2em;
     background-color: #f6f6f6;
   }
+}
+@media all and (min-width: 1024px) and (min-width: 1024px) {
+  .main-how-to-use-desktop__button__compose-menu {
+    flex-flow: row nowrap;
+    margin: 2.8em 0;
+    font-size: medium;
+    background-color: #f6f6f6;
+  }
+}
+@media all and (min-width: 1024px) {
+  .main-how-to-use-desktop__button__compose-menu, .main-how-to-use-desktop__button__compose-menu p {
+    padding: 0 1.2em;
+  }
+}
+@media all and (min-width: 1024px) and (min-width: 1024px) {
+  .main-how-to-use-desktop__button__compose-menu, .main-how-to-use-desktop__button__compose-menu p {
+    padding: 0;
+  }
+}
+@media all and (min-width: 1024px) {
+  .main-how-to-use-desktop__button__compose-menu, .main-how-to-use-desktop__button__compose-menu span {
+    padding-left: 1em;
+  }
+}
+@media all and (min-width: 1024px) {
   .main-how-to-use-desktop__button__compose-menu:hover {
     background-color: #f5edff;
     /*METTRE UN DARKEN !!!*/
   }
+}
+@media all and (min-width: 1024px) {
   .main-how-to-use-desktop__button__taste-restaurant {
     display: flex;
     justify-content: space-evenly;
@@ -956,10 +1215,37 @@ header p {
     padding: 0 2em;
     background-color: #f6f6f6;
   }
+}
+@media all and (min-width: 1024px) and (min-width: 1024px) {
+  .main-how-to-use-desktop__button__taste-restaurant {
+    flex-flow: row nowrap;
+    margin: 2.8em 0;
+    font-size: medium;
+    background-color: #f6f6f6;
+  }
+}
+@media all and (min-width: 1024px) {
+  .main-how-to-use-desktop__button__taste-restaurant, .main-how-to-use-desktop__button__taste-restaurant p {
+    padding: 0 1.2em;
+  }
+}
+@media all and (min-width: 1024px) and (min-width: 1024px) {
+  .main-how-to-use-desktop__button__taste-restaurant, .main-how-to-use-desktop__button__taste-restaurant p {
+    padding: 0;
+  }
+}
+@media all and (min-width: 1024px) {
+  .main-how-to-use-desktop__button__taste-restaurant, .main-how-to-use-desktop__button__taste-restaurant span {
+    padding-left: 1em;
+  }
+}
+@media all and (min-width: 1024px) {
   .main-how-to-use-desktop__button__taste-restaurant:hover {
     background-color: #f5edff;
     /*METTRE UN DARKEN !!!*/
   }
+}
+@media all and (min-width: 1024px) {
   .main-how-to-use-desktop__button:hover {
     animation: shake-btn 800ms cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
     cursor: pointer;
@@ -967,58 +1253,26 @@ header p {
   .main-how-to-use-desktop__button:hover span {
     color: #9356dc;
   }
-  .main-how-to-use-desktop__button__choose-restaurant {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 4em;
-    box-shadow: 0em 0.4em 0.5em rgba(155, 155, 145, 0.15);
-    border-radius: 0.6em;
-    font-size: large;
-    font-family: robotoregular, arial, serif;
-    margin: 3em 0 3em 0;
-    padding: 0 0 0 0.5em;
-    background-color: #f6f6f6;
-    width: 18em;
-    flex-flow: row nowrap;
-  }
-  .main-how-to-use-desktop__button__compose-menu {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 4em;
-    box-shadow: 0em 0.4em 0.5em rgba(155, 155, 145, 0.15);
-    border-radius: 0.6em;
-    font-size: large;
-    font-family: robotoregular, arial, serif;
-    margin: 3em 0 3em 0;
-    padding: 0 0 0 0.5em;
-    background-color: #f6f6f6;
-    width: 18em;
-    flex-flow: row nowrap;
-  }
-  .main-how-to-use-desktop__button__taste-restaurant {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 4em;
-    box-shadow: 0em 0.4em 0.5em rgba(155, 155, 145, 0.15);
-    border-radius: 0.6em;
-    font-size: large;
-    font-family: robotoregular, arial, serif;
-    margin: 3em 0 3em 0;
-    padding: 0 0 0 0.5em;
-    background-color: #f6f6f6;
-    width: 18em;
-    flex-flow: row nowrap;
-  }
-
+}
+@media all and (min-width: 1024px) {
   main {
-    background: #eaeaea;
+    background: #f6f6f6;
     display: flex;
     justify-content: center;
+    padding-bottom: 4em;
   }
-
+}
+@media all and (min-width: 1024px) {
+  .main-container-desktop {
+    background: #f6f6f6;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+  }
+}
+@media all and (min-width: 1024px) {
   .main-restaurants-list-desktop {
     background: none;
     display: flex;
@@ -1040,12 +1294,13 @@ header p {
   }
   .main-restaurants-list-desktop__item-1 {
     margin: 1.5em 0;
-    box-shadow: 0 1em 1em #eaeaea;
     border-radius: 2em;
-    height: 20em;
+    height: 45%;
     width: 30%;
     border: solid #fff;
     background: #fff;
+    box-shadow: 0 0.3em 0.5em #5e5e5e36;
+    color: #35353575;
   }
   .main-restaurants-list-desktop__item-1 img {
     width: 100%;
@@ -1055,12 +1310,13 @@ header p {
   }
   .main-restaurants-list-desktop__item-2 {
     margin: 1.5em 0;
-    box-shadow: 0 1em 1em #eaeaea;
     border-radius: 2em;
-    height: 20em;
+    height: 45%;
     width: 30%;
     border: solid #fff;
     background: #fff;
+    box-shadow: 0 0.3em 0.5em #5e5e5e36;
+    color: #35353575;
   }
   .main-restaurants-list-desktop__item-2 img {
     width: 100%;
@@ -1070,12 +1326,13 @@ header p {
   }
   .main-restaurants-list-desktop__item-3 {
     margin: 1.5em 0;
-    box-shadow: 0 1em 1em #eaeaea;
     border-radius: 2em;
-    height: 20em;
+    height: 45%;
     width: 30%;
     border: solid #fff;
     background: #fff;
+    box-shadow: 0 0.3em 0.5em #5e5e5e36;
+    color: #35353575;
   }
   .main-restaurants-list-desktop__item-3 img {
     width: 100%;
@@ -1085,12 +1342,13 @@ header p {
   }
   .main-restaurants-list-desktop__item-4 {
     margin: 1.5em 0;
-    box-shadow: 0 1em 1em #eaeaea;
     border-radius: 2em;
-    height: 20em;
+    height: 45%;
     width: 30%;
     border: solid #fff;
     background: #fff;
+    box-shadow: 0 0.3em 0.5em #5e5e5e36;
+    color: #35353575;
   }
   .main-restaurants-list-desktop__item-4 img {
     width: 100%;
@@ -1122,16 +1380,15 @@ header p {
     margin-right: 2em;
     font-size: 0.4em;
   }
-
-  /*.icon-site {
-      margin-left: 15%;
-  }*/
+}
+@media all and (min-width: 1024px) {
   h2 {
     font-size: 2.6em;
     font-family: "robotoregular", arial, serif;
     margin: 0;
   }
-
+}
+@media all and (min-width: 1024px) {
   h3 {
     font-size: 1.6em;
     font-family: robotoregular, arial, serif;
@@ -1139,26 +1396,30 @@ header p {
     font-weight: normal;
     width: 100%;
   }
-
+}
+@media all and (min-width: 1024px) {
   h4 {
     font-size: 1.4em;
     font-family: robotoregular, arial, serif;
     font-weight: normal;
     margin: 0 1em;
   }
-
+}
+@media all and (min-width: 1024px) {
   p {
     font-size: 1.9em;
     font-family: robotoregular, arial, serif;
     margin: 0 0.5em;
   }
-
+}
+@media all and (min-width: 1024px) {
   .fa, .fas {
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
     font-size: 1.2em;
   }
-
+}
+@media all and (min-width: 1024px) {
   span.fas.fa-map-marker-alt {
     position: absolute;
     font-size: 1.4em;
@@ -1181,6 +1442,17 @@ header p {
     display: none;
   }
 
+  .main-how-to-use-desktop {
+    /*&__button {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+        height: 61%;
+        margin: 0 2em;
+        width: 25%;
+    }*/
+  }
   .main-how-to-use-desktop__bloc {
     display: flex;
     flex-flow: column wrap;
@@ -1193,23 +1465,315 @@ header p {
     flex-flow: row nowrap;
     justify-content: center;
   }
-  .main-how-to-use-desktop__button {
+}
+@media all and (min-width: 1024px) {
+  .choice {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+}
+@media all and (min-width: 1024px) {
+  .main-content__thumbnail-desktop-item-1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    height: 5em;
+    margin: 1.2em 0 0.1em;
+    border-radius: 1em;
+    box-shadow: 0 0.4em 0.5em rgba(1, 1, 1, 0.1);
+    overflow: hidden;
+    width: 25em;
+  }
+  .main-content__thumbnail-desktop-item-1:hover {
+    cursor: pointer;
+  }
+  .main-content__thumbnail-desktop-item-1:hover .main-content__thumbnail-desktop-item__right-button {
+    transition: all 0.85s cubic-bezier(0.27, 0.04, 0.01, 1);
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    right: 2em;
+    font-size: 1.5em;
+    color: white;
+    background-color: #99e2d0;
+  }
+  .main-content__thumbnail-desktop-item-1:hover h4.thumbnail-title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .main-content__thumbnail-desktop-item-1:hover .main-content__thumbnail-desktop-item__content {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .main-content__thumbnail-desktop-item-1:hover p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .main-content__thumbnail-desktop-item-2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    height: 5em;
+    margin: 1.2em 0 0.1em;
+    border-radius: 1em;
+    box-shadow: 0 0.4em 0.5em rgba(1, 1, 1, 0.1);
+    overflow: hidden;
+    width: 25em;
+  }
+  .main-content__thumbnail-desktop-item-2:hover {
+    cursor: pointer;
+  }
+  .main-content__thumbnail-desktop-item-2:hover .main-content__thumbnail-desktop-item__right-button {
+    transition: all 0.85s cubic-bezier(0.27, 0.04, 0.01, 1);
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    right: 2em;
+    font-size: 1.5em;
+    color: white;
+    background-color: #99e2d0;
+  }
+  .main-content__thumbnail-desktop-item-2:hover h4.thumbnail-title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .main-content__thumbnail-desktop-item-2:hover .main-content__thumbnail-desktop-item__content {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .main-content__thumbnail-desktop-item-2:hover p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .main-content__thumbnail-desktop-item-3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    height: 5em;
+    margin: 1.2em 0 0.1em;
+    border-radius: 1em;
+    box-shadow: 0 0.4em 0.5em rgba(1, 1, 1, 0.1);
+    overflow: hidden;
+    width: 25em;
+  }
+  .main-content__thumbnail-desktop-item-3:hover {
+    cursor: pointer;
+  }
+  .main-content__thumbnail-desktop-item-3:hover .main-content__thumbnail-desktop-item__right-button {
+    transition: all 0.85s cubic-bezier(0.27, 0.04, 0.01, 1);
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    right: 2em;
+    font-size: 1.5em;
+    color: white;
+    background-color: #99e2d0;
+  }
+  .main-content__thumbnail-desktop-item-3:hover h4.thumbnail-title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .main-content__thumbnail-desktop-item-3:hover .main-content__thumbnail-desktop-item__content {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .main-content__thumbnail-desktop-item-3:hover p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .main-content__thumbnail-desktop-item-4 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    height: 5em;
+    margin: 1.2em 0 0.1em;
+    border-radius: 1em;
+    box-shadow: 0 0.4em 0.5em rgba(1, 1, 1, 0.1);
+    overflow: hidden;
+    width: 25em;
+  }
+  .main-content__thumbnail-desktop-item-4:hover {
+    cursor: pointer;
+  }
+  .main-content__thumbnail-desktop-item-4:hover .main-content__thumbnail-desktop-item__right-button {
+    transition: all 0.85s cubic-bezier(0.27, 0.04, 0.01, 1);
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    right: 2em;
+    font-size: 1.5em;
+    color: white;
+    background-color: #99e2d0;
+  }
+  .main-content__thumbnail-desktop-item-4:hover h4.thumbnail-title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .main-content__thumbnail-desktop-item-4:hover .main-content__thumbnail-desktop-item__content {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .main-content__thumbnail-desktop-item-4:hover p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+@media all and (min-width: 1024px) {
+  .main-content__thumbnail-desktop-item__right-button {
+    display: flex;
+    width: 0;
+    color: rgba(0, 0, 0, 0);
+    overflow: hidden;
+  }
+}
+@media all and (min-width: 1024px) {
+  .price {
+    display: flex;
+    align-items: center;
+    padding: 1.2em 1.2em 0 1.2em;
+    font-size: 1em;
+    font-weight: 900;
+  }
+}
+@media all and (min-width: 1024px) {
+  .main-content__thumbnail-desktop-item__content {
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    margin: 0 0 auto;
+    padding-left: 0.4em;
+  }
+  .main-content__thumbnail-desktop-item__content h4.thumbnail-title {
+    font-weight: 900;
+    font-size: 1.1em;
+    padding-bottom: 0.2em;
+  }
+  .main-content__thumbnail-desktop-item__content p {
+    font-size: 0.9em;
+    font-family: Arial, serif;
+    font-weight: normal;
+  }
+}
+@media all and (min-width: 1024px) {
+  .main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+    width: 100%;
+  }
+  .main-content img {
+    width: 100%;
+    height: 20em;
+    object-fit: cover;
+  }
+  .main-content__restaurant-name-desktop {
+    margin-top: -6em;
+    background-color: #ffffff;
+    width: 100%;
+    border-radius: 3em 3em 0 0;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .main-content__restaurant-name-desktop h1.menu-title {
+    margin: 1.5em 0;
+    padding: 0 1.5em;
+    font-size: 2em;
+    font-weight: normal;
+  }
+  .main-content__thumbnail-desktop {
+    margin-top: 0;
+    margin-bottom: 3em;
+    width: 100%;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    align-items: center;
-    height: 61%;
-    margin: 0 2em;
-    width: 25%;
+    background: #ffffff;
+  }
+  .main-content__thumbnail-desktop-item-1 {
+    animation-name: slideUp;
+    animation-delay: 3600ms;
+    animation-duration: 1000ms;
+    animation-timing-function: ease;
+    animation-direction: normal;
+    animation-fill-mode: both;
+  }
+  .main-content__thumbnail-desktop-item-2 {
+    animation-name: slideUp;
+    animation-delay: 3600ms;
+    animation-duration: 1000ms;
+    animation-timing-function: ease;
+    animation-direction: normal;
+    animation-fill-mode: both;
+    animation-delay: 3890ms;
+  }
+  .main-content__thumbnail-desktop-item-3 {
+    animation-name: slideUp;
+    animation-delay: 3600ms;
+    animation-duration: 1000ms;
+    animation-timing-function: ease;
+    animation-direction: normal;
+    animation-fill-mode: both;
+    animation-delay: 3980ms;
+  }
+  .main-content__thumbnail-desktop-item-4 {
+    animation-name: slideUp;
+    animation-delay: 3600ms;
+    animation-duration: 1000ms;
+    animation-timing-function: ease;
+    animation-direction: normal;
+    animation-fill-mode: both;
+    animation-delay: 4070ms;
+  }
+}
+@media all and (max-width: 1600px) {
+  h4 {
+    font-size: 1.2em;
+    margin: 0 0.5em;
+  }
+
+  .main-restaurants-list-desktop .description p {
+    font-size: 1em;
+    margin: 0 0.5em;
+  }
+
+  .main-restaurants-list-desktop .description-heart {
+    margin-right: 3em;
+    font-size: 0.3em;
+    padding: 0 1em;
   }
 }
 footer {
   background-color: #353535;
-  height: 12em;
+  height: 10em;
   padding: 1em 0;
 }
 footer h1 {
-  color: white;
+  color: #ffffff;
   font-size: 1.4em;
   font-weight: normal;
   padding-top: 0;
@@ -1226,10 +1790,9 @@ footer ul {
   flex-flow: column nowrap;
   justify-content: center;
   align-items: flex-start;
-  width: 80%;
 }
 footer li {
-  color: white;
+  color: #ffffff;
   text-decoration: none;
   list-style-type: none;
   font-size: 1.1em;
@@ -1251,14 +1814,22 @@ footer li p {
   color: #ffffff;
 }
 
-@media all and (min-width: 1025px) {
+.footer-content a {
+  display: flex;
+  flex-flow: row nowrap;
+  color: #ffffff;
+}
+
+@media all and (min-width: 1024px) {
   footer {
     background-color: #353535;
-    height: 4em;
-    padding: 0;
+    position: relative;
+    width: 100%;
+    height: 10%;
+    bottom: 0;
   }
   footer h1 {
-    color: white;
+    color: #ffffff;
     font-size: 3em;
     font-weight: normal;
     padding: 0;
@@ -1268,20 +1839,23 @@ footer li p {
     align-items: center;
   }
   footer ul {
-    padding-bottom: 0em;
     padding-top: 1em;
+    padding-bottom: 0;
+    padding-left: 0;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
   }
   footer li {
-    color: white;
+    color: w #ffffff;
     text-decoration: none;
     list-style-type: none;
-    font-size: 0.6em;
+    font-size: 1.6em;
     display: flex;
     flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
     padding: 0 1em;
   }
   footer li span {
@@ -1292,6 +1866,7 @@ footer li p {
   .footer-logo {
     position: absolute;
     right: 5%;
+    font-size: medium;
   }
 }
 @keyframes spinner {
@@ -1370,17 +1945,18 @@ input#search-field {
   color: #353535;
 }
 
-@media all and (min-width: 1025px) {
+@media all and (min-width: 1024px) {
   input#search-field-desktop {
-    width: inherit;
     height: inherit;
     text-align: center;
     font-size: 1.2em;
     border: none;
-    box-shadow: 0 0.5em 5em #5e5e5e36;
+    box-shadow: 0 0.3em 0.5em #5e5e5e36;
     color: #35353575;
     border-radius: 0.5em;
     width: 100%;
+    padding: 0 1em 0 1em;
+    margin: 2em;
   }
 }
 @keyframes shake-btn {
@@ -1467,8 +2043,6 @@ input#search-field {
 }*/
 @keyframes pictogramme {
   0% {
-    width: 45%;
-    height: 45%;
     visibility: visible;
   }
   10% {
@@ -1499,8 +2073,6 @@ input#search-field {
     opacity: 0.02;
   }
   100% {
-    width: 45%;
-    height: 45%;
     visibility: hidden;
     z-index: -1;
   }
