@@ -1297,7 +1297,6 @@ header p {
     border-radius: 2em;
     height: 45%;
     width: 30%;
-    border: solid #fff;
     background: #fff;
     box-shadow: 0 0.3em 0.5em #5e5e5e36;
     color: #35353575;
@@ -1313,7 +1312,6 @@ header p {
     border-radius: 2em;
     height: 45%;
     width: 30%;
-    border: solid #fff;
     background: #fff;
     box-shadow: 0 0.3em 0.5em #5e5e5e36;
     color: #35353575;
@@ -1329,7 +1327,6 @@ header p {
     border-radius: 2em;
     height: 45%;
     width: 30%;
-    border: solid #fff;
     background: #fff;
     box-shadow: 0 0.3em 0.5em #5e5e5e36;
     color: #35353575;
@@ -1345,7 +1342,6 @@ header p {
     border-radius: 2em;
     height: 45%;
     width: 30%;
-    border: solid #fff;
     background: #fff;
     box-shadow: 0 0.3em 0.5em #5e5e5e36;
     color: #35353575;
@@ -1848,7 +1844,7 @@ footer li p {
     align-items: center;
   }
   footer li {
-    color: w #ffffff;
+    color: #ffffff;
     text-decoration: none;
     list-style-type: none;
     font-size: 1.6em;
