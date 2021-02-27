@@ -84,8 +84,8 @@
 
 @keyframes pictogramme {
     0% {
-        width: 45%;
-        height: 45%;
+        //width: auto;
+        //height: 45%;
         visibility: visible;
     }
     10% {opacity: 0.02;}
@@ -99,8 +99,8 @@
     90% {opacity: 0.02;}
 
     100% {
-        width: 45%;
-        height: 45%;
+        //width: auto;
+        //height: 45%;
         visibility: hidden;
         z-index: -1;
     }

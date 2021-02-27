@@ -2,14 +2,20 @@
 
 span.fas.fa-arrow-left {
     position: absolute;
-    margin: 0.7em 1em;
+    margin: 2% 5%; //0.3em 1em;
+    font-size: 1.6em;
 }
 
 span.fas.fa-map-marker-alt {
     position: absolute;
     font-size: 1.4em;
     z-index: 1;
-    margin: 0 10em 0 0;    
+    margin: 0 10em 0 0;  
+    color: $color-input-text;
+    
+    @media all and (min-width: map-get($breakpoint, desktop)) {
+        margin: 0 5em 0 0;
+    }
 }
 
 .fa, .fas {
@@ -29,5 +35,10 @@ span.far.fa-heart {
     &:hover {
         color: $color-primary;
         font-weight: 900;
+
+        background: linear-gradient($color-primary, $color-secondary);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        cursor: pointer; //VERSION DE DEMONSTRATION: Change le curseur lors du survol
     }
 }

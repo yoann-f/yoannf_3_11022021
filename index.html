@@ -53,7 +53,9 @@
                 <h2>Réservez le menu qui vous convient</h2>
                 <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
                 <div class="header-navigation__localisation__button">
-                    <h5>Explorez nos restaurants</h5>
+                    <a href="#">
+                        <h5>Explorez nos restaurants</h5>
+                    </a>
                 </div>
             </div>
 
@@ -73,12 +75,14 @@
                         <span>d</span>
                     </div>-->
                     <img class="ohmyfood-logo" src="images/logo/ohmyfood.png" alt="Logo Oh! My food." />
-                    <div class="header-navigation-desktop__localisation__button">
-                        <h5>Explorez nos restaurants</h5>
-                        <div class="menu-button">
+                    <div class="header-navigation-desktop__localisation__button" role="navigation">
+                        <a href="#">
+                            <h5>Explorez nos restaurants</h5>
+                        </a>
+                        <a href="" class="menu-button">
                             <span class="fas fa-bars"></span>
                             <p>Menu</p>
-                        </div>
+                        </a>
                     </div>
                 </div>
             
@@ -104,10 +108,10 @@
                                 <div class="step">
                                     <p>1</p>
                                 </div>
-                                <div class="main-how-to-use-desktop__button__choose-restaurant">
+                                <a href="" class="main-how-to-use-desktop__button__choose-restaurant">
                                     <span class="fas fa-mobile-alt"></span>
                                     <p>Choisissez un restaurant</p>
-                                </div>
+                                </a>
                             </div>
             
                             <!--Bouton de composition du menu-->
@@ -115,21 +119,21 @@
                                 <div class="step">
                                     <p>2</p>
                                 </div>
-                                <div class="main-how-to-use-desktop__button__compose-menu">
+                                <a href="" class="main-how-to-use-desktop__button__compose-menu">
                                     <span class="fas fa-list-ul"></span>
                                     <p>Composez votre menu</p>
-                                </div>
+                                </a>
                             </div>
             
                             <!--Bouton de dégustation sur place ou à emporter-->
-                            <div class="main-how-to-use-desktop__button">
+                            <div class="main-how-to-use-desktop__button" name="taste-restaurant" required="">
                                 <div class="step">
                                     <p>3</p>
                                 </div>
-                                <div class="main-how-to-use-desktop__button__taste-restaurant">
+                                <a href="" class="main-how-to-use-desktop__button__taste-restaurant">
                                     <span class="fas fa-store"></span>
                                     <p>Dégustez au restaurant</p>
-                                </div>
+                                </a>
                             </div>
                         </div>
             
@@ -158,10 +162,10 @@
                         <div class="step">
                             <p>1</p>
                         </div>
-                        <div class="main-how-to-use__button__choose-restaurant">
+                        <a href="#" class="main-how-to-use__button__choose-restaurant">
                             <span class="fas fa-mobile-alt"></span>
                             <p>Choisissez un restaurant</p>
-                        </div>
+                        </a>
                     </div>
 
                     <!--Bouton de composition du menu-->
@@ -169,10 +173,10 @@
                         <div class="step">
                             <p>2</p>
                         </div>
-                        <div class="main-how-to-use__button__compose-menu">
+                        <a href="#" class="main-how-to-use__button__compose-menu">
                             <span class="fas fa-list-ul"></span>
                             <p>Composez votre menu</p>
-                        </div>
+                        </a>
                     </div>
 
                     <!--Bouton de dégustation sur place ou à emporter-->
@@ -180,10 +184,10 @@
                         <div class="step">
                             <p>3</p>
                         </div>
-                        <div class="main-how-to-use__button__taste-restaurant">
+                        <a href="#" class="main-how-to-use__button__taste-restaurant">
                             <span class="fas fa-store"></span>
                             <p>Dégustez au restaurant</p>
-                        </div>
+                        </a>
                     </div>
                 </div>
             </section>
@@ -367,15 +371,21 @@
             <div class="footer-content">
                 <ul>
                     <li>
-                        <span class="fas fa-utensils"></span>
-                        <p>Proposer un restaurant</p>
+                        <a href="">
+                            <span class="fas fa-utensils"></span>
+                            <p>Proposer un restaurant</p>
+                        </a>
                     </li>
                     <li>
-                        <span class="fas fa-hands-helping"></span>
-                        <p>Devenir partenaire</p>
+                        <a href="">
+                            <span class="fas fa-hands-helping"></span>
+                            <p>Devenir partenaire</p>
+                        </a>
                     </li>
                     <li>
-                        <p>Mentions légales</p>
+                        <a href="">
+                            <p>Mentions légales</p>
+                        </a>
                     </li>
                     <li>
                         <a href="mailto:contact@ohmyfood.fr?subject=Demande%20d'informations">
