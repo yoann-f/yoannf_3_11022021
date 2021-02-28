@@ -5,11 +5,6 @@
     flex-flow: column nowrap;
     align-items: center;
     background: $color-quaternary;
-
-    /*@media all and (min-width: map-get($breakpoint, desktop)) {
-        background-color: tomato; //A SUPPRIMER
-    }*/
-
     & .green-underline {
         margin: 0;
         width: 3.2em;
@@ -18,6 +13,9 @@
     }    
 }
 
+
+///////////////////
+// HEADER MIXINS //
 @mixin header {
     display: flex;
     justify-content: space-around;
@@ -29,10 +27,12 @@
     justify-content: center;
     text-decoration: none;
     padding: 0;
-
     width: 100%;
 }
 
+
+///////////////////
+// BUTTON MIXINS //
 @mixin user-button {
     display: flex;
     justify-content: space-evenly;
@@ -52,7 +52,6 @@
         font-size: medium;
         background-color: $color-septenary;
     }
-
     &, p {
         padding: 0 1.2em;
 
@@ -63,13 +62,14 @@
     &, span {
         padding-left: 1em;
     }
-
     &:hover {
         background-color: $color-senary; /*METTRE UN DARKEN !!!*/
     }
 }
 
-//MIXIN ITERATING
+
+//////////////////////
+// ITERATION MIXINS //
 @mixin item-number {
     @for $i from 1 through 4 {
         &-#{$i} {
@@ -92,12 +92,10 @@
     @for $i from 1 through 4 {
         &-#{$i} {
             margin: 1.5em 0;
-            //box-shadow: 0 1em 1em #eaeaea;
             border-radius: 2em;
-            height: 45%; //20em;
+            height: 45%;
             width: 30%;
-            //border: solid #fff;
-            background: #fff;
+            background: $color-quaternary;
             box-shadow: 0 0.3em 0.5em #5e5e5e36;
             color: #35353575;
             & img {
@@ -111,8 +109,8 @@
 }
 
 
-////////////////////////////////////////////////////////////////////////////////////////
-//LOADING-SPINNER
+////////////////////////////////////////////
+// LOADING-SPINNER CIRCLE ROTATION EFFECT //
 @mixin loadingSpinner {
     transition-delay: 2600ms;
     display: flex;
@@ -121,8 +119,7 @@
     width: 100%;
     height: 100%;
     position: absolute;
-    visibility: hidden;
-    
+    visibility: hidden;    
     &__background {
         animation: 3000ms linear fade-out;
         position: fixed;
@@ -132,7 +129,6 @@
         width: 0%;
         height: 0%;
     }
-
     &__loading-spinner {
         animation: 500ms linear spinner;
         animation-iteration-count: 8;
@@ -148,7 +144,8 @@
     }
 }
 
-//LOADING LOGO ANIMATION -VERSION ALTERNATIVE AU LOADING-SPINNER CIRCULAIRE
+////////////////////////////////////////////////////////////////////////////
+// LOADING LOGO ANIMATION -ALTERNATIVE VERSION FOR CIRCLE LOADING-SPINNER //
 @mixin logoAnim {
     transition-delay: 2600ms;
     display: flex;
@@ -158,7 +155,6 @@
     height: 100%;
     position: absolute;
     visibility: hidden;
-
     & img {
         animation: 3600ms linear pictogramme;
         position: fixed;
@@ -168,7 +164,6 @@
         align-items: center;
         opacity: 0;
     }
-
     &__background {
         animation: 3800ms linear fade-out;
         position: fixed;
@@ -178,12 +173,10 @@
         width: 0%;
         height: 0%;
     }
-
     &__logo-letters {
         color: #3c3c3c;
         position: fixed;
         z-index: 9999;
-        //animation: logoanim 2500ms cubic-bezier(.25,.46,.45,.94);
         & span {
             font-family: shrikhandregular, Arial, serif;
             font-size: 3em;
@@ -193,32 +186,26 @@
             animation: lettersanim 300ms ease infinite alternate;
             animation-iteration-count: 10;
             color: $color-secondary;
-            text-shadow: 0 0.05em 0 $color-secondary-darker,0 0.1em 0 $color-secondary-darker, 0 0.11em 0 $color-secondary-darker, 0 0.12em 0$color-secondary-darker, 0 0.13em 0 $color-secondary-darker, 0 0.14em 0 transparent, 0 0.15em 0 transparent, 0 0.16em 0 transparent, 0 0.17em 0 transparent, 0 0.18em 0.5em rgba(0, 0, 0, 0.4);
+            text-shadow: 0 0.05em 0 $color-secondary-darker, 0 0.1em 0 $color-secondary-darker, 0 0.11em 0 $color-secondary-darker, 0 0.12em 0$color-secondary-darker, 0 0.13em 0 $color-secondary-darker, 0 0.14em 0 transparent, 0 0.15em 0 transparent, 0 0.16em 0 transparent, 0 0.17em 0 transparent, 0 0.18em 0.5em rgba(0, 0, 0, 0.4);
             z-index: 999;
-
             &:nth-child(2) {
                 animation-delay: 0.1s;
             }
-
             &:nth-child(3) {
                 animation-delay: 0.2s;
             }
-
             &:nth-child(4) {
                 animation-delay: 0.3s;
             }
-
             &:nth-child(5) {
                 animation-delay: 0.4s;
             }
             &:nth-child(6) {
                 animation-delay: 0.5s;
             }
-
             &:nth-child(7) {
                 animation-delay: 0.6s;
             }
-
             &:nth-child(8) {
                 animation-delay: 0.7s;
             }
@@ -227,11 +214,8 @@
 }
 
 
-
-
-
-
-// ANIMATION DES VIGNETTES /PAGE MENU
+//////////////////////////////////////
+// THUMBNAILS ANIMATIONS /MENU PAGE //
 @mixin slide-up {
 
     animation-name: slideUp;

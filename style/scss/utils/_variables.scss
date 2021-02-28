@@ -13,6 +13,10 @@ $color-octonary: #eaeaea;
 $color-input-text: #353535;
 $color-menu-button-desktop: #ffffff;
 
+//COULEURS POUR LES COLORS ET BOX-SHADOW DES INPUTS
+$color-input: #35353575;
+$color-input-box-shadow: #5e5e5e36;
+
 //COULEURS DU BACKGROUND
 $color-background-primary: $color-quaternary;
 $color-background-secondary: $color-septenary;
@@ -37,7 +41,6 @@ $thumbnail_width: 100%;
 $thumbnail-height: 11em;
 $thumbnail-height-desktop: 14em;
 $thumbnail-border-radius: 1.4em 1.4em 0 0;
-//$btn-gradient: linear-gradient($color-primary, $color-secondary);
 
 
 //NOMBRE DE VIGNETTES MAXIMALES POUR UNE OFFRE DE REPAS, PAR CATÉGORIE

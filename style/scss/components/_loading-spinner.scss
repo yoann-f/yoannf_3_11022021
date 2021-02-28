@@ -1,5 +1,5 @@
-//ANIMATION LOADING-SPINNER
 
+//ANIMATION LOADING-SPINNER CIRCULAIRE (LOADING DÉSACTIVÉ)
 @keyframes spinner {
     0% {
         transform: translate3d(0, 0, 0) rotate(0deg);
@@ -12,10 +12,9 @@
 }
 
 //ANIMATION DU BACKGROUND /EFFET COLORÉ /CLIGNOTANT DURANT L'ANIMATION DU LOADING-SPINNER
-
 @keyframes fade-out {
     0% {
-        background: rgba(255, 255, 255, 1);
+        background: $color-quaternary;
         width: 100%;
         height: 100%;
     }
@@ -23,23 +22,23 @@
         background:  $color-primary;
     }
     40% {
-        background: rgba(255, 255, 255, 1);
+        background: $color-quaternary;
     }
     60% {
         background:  $color-primary;
     }
     60% {
-        background: rgba(255, 255, 255, 1);
+        background: $color-quaternary;
     }
     80% {
         background:  $color-primary;
     }
     95% {
-        background: rgba(255, 255, 255, 1);
+        background: $color-quaternary;
         opacity: 1;
     }
     100% {
-        background: rgba(255, 255, 255, 1);
+        background: $color-quaternary;
         opacity: 0;
         width: 100%;
         height: 100%;

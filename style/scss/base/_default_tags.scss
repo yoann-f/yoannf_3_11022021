@@ -1,5 +1,6 @@
 // MISE EN FORME DES BALISES GÉNÉRIQUES
 
+//PARAMETRES POUR LA VERSION MOBILE DU SITE
 h1 {
     font-size: 4em;
     font-family: shrikhandregular, arial, serif;        
@@ -39,4 +40,56 @@ p {
 a {
     text-decoration: none;
     color: $link-color;
+}
+
+//PARAMETRES POUR LA VERSION DESKTOP DU SITE
+@media all and (min-width: map-get($breakpoint, desktop)) {
+
+    h2 {
+        font-size: 2.6em;
+        font-family: "robotoregular", arial, serif;
+        margin: 0;
+    }
+
+    h3 {
+        font-size: 1.6em;
+        font-family: robotoregular, arial, serif;
+        margin: 0.2em 0 0 0;
+        font-weight: normal;
+        width: 100%;
+    }
+
+    h4 {
+        font-size: 1.4em;
+        font-family: robotoregular, arial, serif;
+        font-weight: normal;
+        margin: 0 1em;
+    }
+
+    p {
+        font-size: 1.9em;
+        font-family: robotoregular, arial, serif;
+        margin: 0 0.5em;
+    }
+    
+    @media all and (max-width: 1420px) {
+    
+        h3 {
+            font-size: 1.6em;
+            font-family: robotoregular, arial, serif;
+            margin: 0.2em 0 0 0;
+            font-weight: normal;
+            width: 100%;
+            text-align: center;
+        }    
+    }
+}
+
+//PARAMETRES SPÉCIFIQUES POUR LA VERSION DESKTOP DU SITE AVEC UN MAX-WIDTH DE 1600px
+@media all and (max-width: map-get($breakpoint-text-adapt, desktop-1600)) {
+
+    h4 {
+        font-size: 1.2em;
+        margin: 0 0.5em;
+    }    
 }
