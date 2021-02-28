@@ -1,27 +1,15 @@
-// HEADER
+// PARAMETRES POUR LA VERSION MOBILE DU SITE //
+///////////////////////////////////////////////
 
-////////////////////////
-//MOBILE VERSION
 
-//DESACTIVATION DES CONTENEURS DE LA VERSION MOBILE
+//DESACTIVATION DES CONTENEURS DE LA VERSION DESKTOP //
 .header-navigation-desktop {
     display: none;
 }
-
-.main-container-desktop {
-    display: none;
-}
-
-.main-how-to-use-desktop {
-    display: none;
-}
-
-.main-restaurants-list-desktop {
-    display: none;
-}
-////////////////////////
+//////////////////////////////////////////////////////
 
 
+// HEADER
 header {
     @include miseEnPage();
     padding: 2em 0 1em 0;
@@ -74,7 +62,7 @@ header {
         }
     }    
     &__localisation {
-        padding: 2em 0 0 0; //1em 0 1em;
+        padding: 2em 0 0 0;
         background-color: $color-septenary;         
         text-align: center;
         width: 100%;
@@ -86,7 +74,7 @@ header {
         }
         & a {
             @include header-nav(); 
-            padding: 0; //4em 0 8em 0;            
+            padding: 0;            
         }                
         &__button {
             display: flex;
@@ -117,71 +105,37 @@ header {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-///////////////////////////////////////////////////////////////////////
-//DESKTOP VERSION
-/*
-@media all and (min-width: 1025px) {
-    
-}
-*/
-
+// PARAMETRES POUR LA VERSION DESKTOP DU SITE //
+////////////////////////////////////////////////
 @media all and (min-width: map-get($breakpoint, desktop)) {
 
-//DESACTIVATION DES CONTENEURS DE LA VERSION MOBILE
-.loading-page {
-    display: none;
-}
+// DESACTIVATION DES CONTENEURS DE LA VERSION MOBILE //
+    .loading-page {
+        display: none;
+    }
 
-.header-navigation {
-    display: none;
-}
+    .header-navigation {
+        display: none;
+    }
 
-.header-navigation__localisation {
-    display: none;
-}
+    .header-navigation__localisation {
+        display: none;
+    }
+///////////////////////////////////////////////////////
 
-.main-container {
-    display: none;
-}
-
-.main-how-to-use {
-    display: none;
-}
-
-.main-restaurants-list {
-    display: none;
-}
-////////////////////////
 
     body {
         margin: 0;
         background: $color-septenary;
     }
 
+    // HEADER
     header {
         display: flex;
         flex-flow: column nowrap;
         align-items: center;
         background: $color-quaternary;
         padding: 1em 0 1em 0;
-
         & p {
             font-size: $paragraphe * 1.25;
         }
@@ -190,21 +144,18 @@ header {
     .header-navigation-desktop {
         width: 100%;
         display: inline-block;
-
         &__logo {
            display: flex;
             justify-content: space-between;
             align-items: center;
             padding-bottom: 1em;
             padding-left: 15%;
-            padding-right: 15%;
-            
+            padding-right: 15%;            
             & img {
                 width: 15%;
                 margin: 1em 0 0 0;
             }
         }
-
         &__localisation {
             padding: 2em 4em 12em 4em;
             padding-right: 4em;
@@ -227,13 +178,11 @@ header {
                 padding: 0;
                 margin: 0;
             }
-
             &__button {
                 display: flex;
                 justify-content: center;
                 height: 3em;
                 margin-bottom: 0;
-
                 & h5 {
                     color: #ebebeb;
                     font-size: 1.4em;
@@ -244,7 +193,7 @@ header {
                     width: 12em;
                     height: 100%;
                     padding: 0.1em 0.1em 0.1em 0.1em;
-                    background: linear-gradient(#ff79da, #9356dc);
+                    background: linear-gradient($color-primary, $color-secondary);
                     border-radius: 0.3em;
                     box-shadow: 0 0.2em 0.5em #ccc;
                     cursor: pointer;
@@ -256,14 +205,11 @@ header {
                 }
             }        
         }
-
         &__search {
             display: flex;
             justify-content: center;
             align-items: center;
             width: 90%;
-            //margin: -2em 0 0 0;
-
             &__field-form {
                 width: 70%;
                 height: 4em;
@@ -292,7 +238,6 @@ header {
         }
     }
 
-
     .menu-button {
         width: 10em;
         font-weight: normal;
@@ -308,477 +253,4 @@ header {
         cursor: pointer;
         margin: 0 0 0 2em;
     }
-
-    .fas.fa-bars {
-        font-size: inherit;
-    }
-
-    span.fas.fa-arrow-left {
-        position: absolute;
-        margin: 1% 10%;
-        font-size: xx-large;
-    }
-
-    .main-how-to-use-desktop {
-        width: 100%;
-        display: flex;
-        justify-content: center; //space-evenly;
-        margin-top: -10em;
-        position: absolute;
-
-        &__bloc {
-            display: flex;
-            flex-flow: column nowrap;
-            justify-content: flex-start;
-            align-items: flex-start;
-            margin-left: 0; //3em;
-        }
-
-        &__content {
-            display: flex;
-            flex-flow: row nowrap;
-            justify-content: flex-start; //space-around;
-        }
-
-        &__button {
-            display: flex;
-            flex-flow: row nowrap;
-            justify-content: center;
-            align-items: center;
-            height: 61%;
-            margin: 0 0.5em;
-            width: 21em;
-
-            & .step {
-                position: absolute; //relative;
-                padding: 1.2em;
-                margin: 2em 16em 2em -1.5em;
-                border-radius: 10em;
-                background-color: #9356dc;
-
-                & p {
-                    font-size: 2em;
-                    margin: -0.7em 0 0 -0.28em;
-                    position: absolute;
-                    color: #ffffff;
-                }
-            }
-            &__choose-restaurant {
-                @include user-button();
-                }
-            &__compose-menu {
-                @include user-button();
-            }
-            &__taste-restaurant {
-                @include user-button();
-            }
-
-            &:hover {
-                animation: shake-btn 800ms cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
-                //transition: translate3d(0, 0, 0);
-                cursor: pointer; //VERSION DE DEMO: Change le curseur lors du survol
-            
-                & span {
-                color: $color-secondary;
-                }
-            }                        
-
-            /*&__choose-restaurant {
-                //A PLACER EN MIXIN !!!!!
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                height: 4em;
-                box-shadow: 0em 0.4em 0.5em rgba(155, 155, 145, 0.15);
-                border-radius: 0.6em;
-                font-size: large;
-                font-family: robotoregular, arial, serif;
-                margin: 3em 0 3em 0;
-                padding: 0 0 0 0.5em;
-                background-color: #f6f6f6;
-                width: 18em;
-                flex-flow: row nowrap;
-            }
-            &__compose-menu {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                height: 4em;
-                box-shadow: 0em 0.4em 0.5em rgba(155, 155, 145, 0.15);
-                border-radius: 0.6em;
-                font-size: large;
-                font-family: robotoregular, arial, serif;
-                margin: 3em 0 3em 0;
-                padding: 0 0 0 0.5em;
-                background-color: #f6f6f6;
-                width: 18em;
-                flex-flow: row nowrap;                
-            }
-            &__taste-restaurant {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                height: 4em;
-                box-shadow: 0em 0.4em 0.5em rgba(155, 155, 145, 0.15);
-                border-radius: 0.6em;
-                font-size: large;
-                font-family: robotoregular, arial, serif;
-                margin: 3em 0 3em 0;
-                padding: 0 0 0 0.5em;
-                background-color: #f6f6f6;
-                width: 18em;
-                flex-flow: row nowrap;                 
-            }*/
-        }
-    }
-
-    main {
-        background: $color-septenary;
-        display: flex;
-        justify-content: center;
-        padding-bottom: 4em;
-    }
-
-    .main-container-desktop {
-        background: #f6f6f6;
-        display: flex;
-        flex-flow: column nowrap;
-        justify-content: center;
-        align-items: center;
-        //padding-bottom: 2.5em;
-        width: 70%;
-    }
-
-    .main-restaurants-list-desktop {
-        background: none;
-        display: flex;
-        justify-content: center;
-        flex-flow: row wrap;
-        padding: 0;
-        margin-top: 10em;
-        width: 74%;
-
-        &__item {
-            display: flex;
-            flex-flow: row wrap;
-            justify-content: space-between;
-            margin-top: 0; //1em;
-            width: 100%;
-        }
-        
-        &__item {
-            @include item-number-desktop; /*A VERFIIER !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
-        }
-
-        & .new {
-            padding: 0.2em 0em;
-            border-radius: 0.2em;
-            font-size: x-large;
-            margin: 0.5em 0 0 0.5em;
-            right: unset;
-            background-color: #99e2d0;
-            position: absolute;
-        }
-
-        & .description {
-            padding: 0;
-            display: flex;
-            flex-flow: row nowrap;
-            justify-content: space-between;
-            align-items: center;
-
-            & p {
-                font-size: 1.2em;
-                margin: 0 1em;
-            }
-
-            &-heart {
-                margin-right: 2em;
-                font-size: 0.4em;
-            }
-        }
-    }
-
-    /*.icon-site {
-        margin-left: 15%;
-    }*/
-
-    h2 {
-        font-size: 2.6em;
-        font-family: "robotoregular", arial, serif;
-        margin: 0;
-    }
-
-    h3 {
-        font-size: 1.6em;
-        font-family: robotoregular, arial, serif;
-        margin: 0.2em 0 0 0;
-        font-weight: normal;
-        width: 100%;
-    }
-
-    h4 {
-        font-size: 1.4em;
-        font-family: robotoregular, arial, serif;
-        font-weight: normal;
-        margin: 0 1em;
-    }
-
-    p {
-        font-size: 1.9em;
-        font-family: robotoregular, arial, serif;
-        margin: 0 0.5em;
-    }
-
-    .fa, .fas {
-        font-family: 'Font Awesome 5 Free';
-        font-weight: 900;
-        font-size: 1.2em;
-    }
-
-    span.fas.fa-map-marker-alt {
-        position: absolute;
-        font-size: 1.4em;
-        z-index: 1;
-        margin: 0 10em 0 0;
-        color: #35353575;
-    }
-
-
-    //SUPPRESSION DE L'ICONE -CLIC ON SMARTPHONE- SI L'ÉCRAN A UNE RESOLUTION INFERIEURE A 1420px
-    @media all and (max-width: 1420px) {
-
-        h3 {
-            font-size: 1.6em;
-            font-family: robotoregular, arial, serif;
-            margin: 0.2em 0 0 0;
-            font-weight: normal;
-            width: 100%;
-            text-align: center;
-        }
-
-        .icon-site {
-            display: none;
-        }
-
-        .main-how-to-use-desktop {
-        
-            &__bloc {
-                display: flex;
-                flex-flow: column wrap;
-                justify-content: center;
-                align-items: center;
-                margin-left: 0;
-            }
-            &__content {
-                display: flex;
-                flex-flow: row nowrap;
-                justify-content: center;
-            }
-            /*&__button {
-                display: flex;
-                flex-flow: row wrap;
-                justify-content: center;
-                align-items: center;
-                height: 61%;
-                margin: 0 2em;
-                width: 25%;
-            }*/
-        }
-    }
-
-
-
-
-.choice {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-evenly;
-    width: 100%;
 }
-
-//VIGNETTE DE PRESENTATION DES DIFFERENTS CHOIX -ENTRÉES /PLATS /DESSERTS-
-.main-content__thumbnail-desktop-item {
-    @for $i from 1 through $max-choice {
-        &-#{$i} {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: $color-background-primary;
-            height: 5em; //6em;
-            margin: 1.2em 0 0.1em; //1.5em 0;
-            border-radius: 1em;
-            box-shadow: 0 0.4em 0.5em rgb(1 1 1 /10%);
-            overflow: hidden;
-            width: 25em;
-
-            &:hover {
-                cursor: pointer; //VERSION DE DEMONSTRATION: Change le curseur lors du survol
-                & .main-content__thumbnail-desktop-item__right-button {
-                    transition: all 0.85s cubic-bezier(0.27, 0.04, 0.01, 1.00);
-                    width: 45%;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    height: 100%;
-                    right: 2em;
-                    //border-radius: 0 2em 2em 0;
-                    font-size: 1.5em;
-                    color: white;
-                    background-color: $color-tertiary;
-                }
-                & h4.thumbnail-title {
-                    white-space: nowrap;
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-                }
-                & .main-content__thumbnail-desktop-item__content {
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-                }
-                & p {
-                    white-space: nowrap;
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-                }
-            }
-        }
-    }
-}
-
-.main-content__thumbnail-desktop-item__right-button {
-    display: flex;
-    width: 0;
-    color: rgba(0, 0, 0, 0);
-    overflow: hidden;
-}
-
-//ELEMENTS POUR LES PAGES DE MENUS
-.price {
-    display: flex;
-    align-items: center;
-    //height: 70%;
-    padding: 1.2em 1.2em 0 1.2em;
-    //margin: 0.8em 1em 0 1.4em;
-    font-size: 1em;
-    font-weight: 900;
-}
-
-.main-content__thumbnail-desktop-item__content {
-    width: 100%;
-    display: flex;
-    flex-flow: column nowrap;
-    margin: 0 0 auto;
-    padding-left: 0.4em;
-    & h4.thumbnail-title {
-        font-weight: 900;
-        font-size: 1.1em;
-        padding-bottom: 0.2em;
-        //padding: 0 0 0 0.7em;
-    }
-    & p {
-        font-size: 0.9em;
-        font-family: Arial, serif;
-        font-weight: normal;
-    }           
-}
-
-
-
-/*.fas.fa-check-circle:hover {
-    display: flex;
-    justify-content: center;
-}*/
-
-
-
-
-
-
-
-
-
-
-//ELEMENT CLASS MAIN
-.main {
-    
-    &-content {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-flow: column nowrap;
-        width: 100%;
-        & img {
-            width: 100%;
-            height: 20em;        
-            object-fit: cover;
-        }
-        &__restaurant-name-desktop {
-            //position: absolute;
-            margin-top: -6em; //-4em;
-            background-color: $color-quaternary;
-            width: 100%;
-            border-radius: 3em 3em 0 0;
-            display: flex;
-            flex-flow: row nowrap;
-            justify-content: center;
-            align-items: center;
-            & h1.menu-title {
-                margin: 1.5em 0;
-                padding: 0 1.5em;
-                font-size: 2em;
-                font-weight: normal;
-            }
-        }
-        &__thumbnail-desktop {
-            margin-top: 0; //2em;
-            margin-bottom: 3em;
-            width: 100%;
-            display: flex;
-            flex-flow: row wrap;
-            justify-content: center;
-            background: $color-quaternary;
-
-            &-item {
-                &-1 {
-                    @include slide-up;
-                }
-                &-2 {
-                    @include slide-up;
-                    animation-delay: 3890ms;
-                }
-                &-3 {
-                    @include slide-up;
-                    animation-delay: 3980ms;
-                }
-                &-4 {
-                    @include slide-up;
-                    animation-delay: 4070ms;
-                }
-            }
-        }
-    }
-}
-
-
-}
-
-
-@media all and (max-width: map-get($breakpoint-text-adapt, desktop-1600)) {
-
-    h4 {
-        font-size: 1.2em;
-        margin: 0 0.5em;
-    }
-
-    .main-restaurants-list-desktop .description p {
-        font-size: 1em;
-        margin: 0 0.5em;
-    }
-
-    .main-restaurants-list-desktop .description-heart {
-        margin-right: 3em;
-        font-size: 0.3em;
-        padding: 0 01em;
-    }
-};

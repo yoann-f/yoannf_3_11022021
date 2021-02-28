@@ -1,8 +1,10 @@
 //FONTAWESOME CUSTOM
 
+
+//PARAMETRES POUR LA VERSION MOBILE DU SITE
 span.fas.fa-arrow-left {
     position: absolute;
-    margin: 2% 5%; //0.3em 1em;
+    margin: 2% 5%;
     font-size: 1.6em;
 }
 
@@ -41,4 +43,33 @@ span.far.fa-heart {
         -webkit-text-fill-color: transparent;
         cursor: pointer; //VERSION DE DEMONSTRATION: Change le curseur lors du survol
     }
+}
+
+
+//PARAMETRES POUR LA VERSION DESKTOP DU SITE
+@media all and (min-width: map-get($breakpoint, desktop)) {
+
+    span.fas.fa-arrow-left {
+        position: absolute;
+        margin: 1% 10%;
+        font-size: xx-large;
+    } 
+
+    span.fas.fa-map-marker-alt {
+        position: absolute;
+        font-size: 1.4em;
+        z-index: 1;
+        margin: 0 10em 0 0;
+        color: #35353575;
+    }
+
+    .fa, .fas {
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 900;
+        font-size: 1.2em;
+    }
+
+    .fas.fa-bars {
+        font-size: inherit;
+    }    
 }

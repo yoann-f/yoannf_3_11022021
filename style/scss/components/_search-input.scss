@@ -1,5 +1,6 @@
 //CHAMPS DE RECHERCHE (PAGE D'ACCUEIL)
 
+//PARAMETRES POUR LA VERSION MOBILE DU SITE
 input {
     &#search-field {
         width: inherit;
@@ -12,19 +13,18 @@ input {
     }
 }
 
-
+//PARAMETRES POUR LA VERSION DESKTOP DU SITE
 @media all and (min-width: map-get($breakpoint, desktop)) { 
 
     input#search-field-desktop {
-        //width: inherit;
+        width: 100%;
         height: inherit;
         text-align: center;
         font-size: 1.2em;
         border: none;
-        box-shadow: 0 0.3em 0.5em #5e5e5e36;
-        color: #35353575;
+        box-shadow: 0 0.3em 0.5em $color-input-box-shadow;
+        color: $color-input;
         border-radius: 0.5em;
-        width: 100%;
         padding: 0 1em 0 1em;
         margin: 2em;
     }  
