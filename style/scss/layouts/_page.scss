@@ -606,13 +606,13 @@ main {
                 }
             }
         }
+    }
 
-        .choice {
-            display: flex;
-            flex-flow: row wrap;
-            justify-content: space-evenly;
-            width: 100%;
-        }
+    .choice {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+        width: 100%;
     }
 }
 
