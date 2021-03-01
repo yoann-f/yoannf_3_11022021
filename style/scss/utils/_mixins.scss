@@ -219,9 +219,9 @@
 @mixin slide-up {
 
     animation-name: slideUp;
-    animation-delay: 3600ms;
+    animation-delay: 3800ms; //3600ms;
     animation-duration: 1000ms;
     animation-timing-function: ease;
     animation-direction: normal;
-	animation-fill-mode: both;
+    animation-fill-mode: both;
 }

@@ -1,0 +1,13 @@
+//ANIMATION "SHAKE" POUR LES BOUTONS LIÉS AU PRINCIPE DE FONCTIONNEMENT DU SITE
+
+@keyframes heart-pulse-btn {
+  0%, 100% {
+      transform: scale(1);
+  }
+  25% {
+      transform: scale(0.9);
+  }
+  75% {
+      transform: scale(1.2);
+  }
+}

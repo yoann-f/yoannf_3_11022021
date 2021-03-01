@@ -35,6 +35,7 @@ span.fas.fa-map-marker-alt {
 // HEART
 span.far.fa-heart {
     &:hover {
+        animation: heart-pulse-btn 1000ms linear infinite;
         color: $color-primary;
         font-weight: 900;
 
